@@ -9,8 +9,10 @@ Copyright (C) 2011  Matthew Simms
 RPP_var_civSong = "Track08_Harvest_Red";
 RPP_var_civCamera =
 [
-    [[6943.65,-95672.45,39.50], [6168.72,4324.86,38.18], 0.700, 3.5, "Welcome to Aussie Life: Reloaded"],
-    [[6943.65,-95672.45,39.50], [6168.72,4324.86,38.18], 0.700, 7, "Mission brought to you by RP-project.net & AussieLifeReloaded.com"],
+
+
+    [[7259.85,102275.74,-286.87], [[6781.12,2105.07,93.53]], 0.700, 3.5, "Welcome to Aussie Life: Reloaded"],
+    [[2772.38,-97377.56,4049.90], [6810.97,2458.96,6.71], 0.700, 7, "Mission brought to you by RP-project.net & AussieLifeReloaded.com"],
     [[6943.65,-95672.45,39.50], [6168.72,4324.86,38.18], 0.700, 7, "RP-Project Project Leader: Unforgiven"],
     [[3844.62,104305.57,1285.63], [6155.86,4345.51,41.47], 0.700, 7, "RP-Project Lead Administrator: Jason"],
     [[3844.62,104305.57,1285.60], [6176.39,4345.98,41.47], 0.700, 7, "Aussie Life Reloaded Project Leader: WeedMachine"],
