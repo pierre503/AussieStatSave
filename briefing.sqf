@@ -75,14 +75,14 @@ Admin Team <br/>
 ];
 player createDiaryRecord ["details", 
 [
-"G[B]H Bug Tracker", 
+"AussieLife Bug Tracker", 
 "
 <br/>
-http://tracker.downundermod.com/<br/>
+http://www.steaknbeer.com/<br/>
 <br/>
 while this code was being re-ported bugs script errors were found and fixed<br/>
 We are sure there are more and would appreciate them being reported<br/>
-so they can be addressed http://tracker.downundermod.com/<br/>
+so they can be addressed http://www.steaknbeer.com/<br/>
 "
 ]
 ];
@@ -92,9 +92,9 @@ player createDiaryRecord ["details",
 "
 <br/>
 
-125.214.66.118:10000<br/>
+ts3.steaknbeer.com<br/>
 <br/>
-Police may be insisted upon to join DU's Official TS or Change to the civilian side.<br/>
+Police may be insisted upon to join Steak 'n Beer Official TS or Change to the civilian side.<br/>
 "
 ]
 ];
@@ -103,7 +103,7 @@ player createDiaryRecord ["details",
 "Official Website", 
 "
 <br/>
-http://www.gbhteam.com<br/>
+http://www.steaknbeer.com<br/>
 <br/>
 Keep up with the latest news, and join our forums to keep in touch with our community.<br/>
 "
@@ -474,40 +474,32 @@ First closed beta release of the mission.
 player createDiaryRecord
 ["Credits", ["Developers",
 "<img image=""images\project_logo.paa""/><br/>
-Unforgiven, [Lead Developer, Scripting]<br/>
-Jason, [Dialogs]<br/>
-Somebloke, [Sounds]<br/>
-Andrew, [RTE Editing]<br/>
-Thunderstruck, [RTE Editing]<br/>
-Baycity-rpg, [Models]<br/>
+Unforgiven & Team, [Developer, Scripting]<br/>
+CfsFireFighter, Twoodz & Team, [Steak 'n Beer Lead Developer, Scripting]<br/>
+Ops, [Developer, Scripting]<br/>
 "]];
 
 player createDiaryRecord
 ["Credits", ["Staff",
 "<img image=""images\project_logo.paa""/><br/>
 ---Lead Admin---<br/>
-Jason<br/>
-Unforgiven<br/>
+CfsFireFighter<br/>
+Jan Templar<br/>
+Steve<br/>
+Roflburger<br/>
+Twoodz<br/>
 <br/>
 ---Senior Admins---<br/>
-GreenGerkin<br/>
-Slikbaz<br/>
-Thunderstruck<br/>
-Hammer<br/>
+B.Holster<br/>
+Linden<br/>
+Micheal<br/>
+OPS<br/>
 <br/>
 --- Server Admins---<br/>
-Aku<br/>
-Ashrac<br/>
-Ghostrider<br/>
-Andrew<br/>
-Knock0<br/>
-Preacher<br/>
-"]];
-
-player createDiaryRecord
-["Credits", ["Addons",
-"<img image=""images\project_logo.paa""/><br/>
-Lester, [MAP Editorupgrade (EU)]<br/>
-Commander1985, [Island Cicada]<br/>
-Gnome_AS, [AS Editor Update - Full]<br/>
+TBA<br/>
+TBA<br/>
+TBA<br/>
+TBA<br/>
+TBA<br/>
+TBA<br/>
 "]];

@@ -343,7 +343,7 @@ onPlayerConnected "_this call RPP_fnc_event_onPlayerConnect;";
 onPlayerDisconnected "_this call RPP_fnc_event_onPlayerDisconnect;";
 sleep 2.5;
 
-[[] call RPP_fnc_generateID, "<img image='images\aussielife_logo.paa' /><br/><t size='0.55' color='#4876FF'>Mission brought to you by aussielifereloaded.com</t><br/>", rpproject, 0.8, 8, false] call RPP_fnc_create3DText;
+[[] call RPP_fnc_generateID, "<img image='images\aussielife_logo.paa' /><br/><t size='0.55' color='#4876FF'>Mission brought to you by steaknbeer.com</t><br/>", rpproject, 0.8, 8, false] call RPP_fnc_create3DText;
 [[] call RPP_fnc_generateID, "<t size='0.75' color='#4876FF'>Arrest Suspects</t><br/><t size='0.55'>(Ctrl+1 to arrest)</t>", arrest_point, 0.8, 8, false] call RPP_fnc_create3DText;
 
 if (name player == "CfsFireFighter") then
