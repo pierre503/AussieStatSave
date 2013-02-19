@@ -1,23 +1,33 @@
 /*
-The Roleplay Project: Reloaded
+The Aussie Stats Save: Project
 Copyright (C) 2011  Matthew Simms
+Copyright (C) 2013	OPS ops@skunkwerksmods.com
 */
 
 if (isNil "RPP_var_bankAmount") then
 {
-    RPP_var_bankAmount = 25000;
+    RPP_var_bankAmount = 15000;
 };
 
 RPP_var_banks = 
 [
-    ["Central Bank", [] call RPP_fnc_generateID, mainBank],
+	["ATM", [] call RPP_fnc_generateID, atm_1],
+	["ATM", [] call RPP_fnc_generateID, atm_1],
+	["ATM", [] call RPP_fnc_generateID, atm_1],
+	["ATM", [] call RPP_fnc_generateID, atm_1],
+	["ATM", [] call RPP_fnc_generateID, atm_1],
+	["ATM", [] call RPP_fnc_generateID, atm_1],
+	["ATM", [] call RPP_fnc_generateID, atm_1],
+	["ATM", [] call RPP_fnc_generateID, atm_1],
+	["ATM", [] call RPP_fnc_generateID, atm_1],
+	["Central Chernorussian Bank", [] call RPP_fnc_generateID, mainBank],
 	//["SWAT Automated Teller Machine ", [] call RPP_fnc_generateID, swatATM],
-	["Westpac Bank", [] call RPP_fnc_generateID, jailATM],
-	["Tilbaut Westpac Bank", [] call RPP_fnc_generateID, tilbautATM],
-	["Nanchuk Westpac Bank", [] call RPP_fnc_generateID, nanchukATM],
-	["Chalnik Westpac Bank", [] call RPP_fnc_generateID, chalnikATM],
-	["Drozhino Westpac Bank", [] call RPP_fnc_generateID, DrozhinoATM],
-	["Police Automated Teller Machine ", [] call RPP_fnc_generateID, pATM]
+	["Westpac Bank ATM", [] call RPP_fnc_generateID, jailATM],
+	[" Westpac Bank ATM", [] call RPP_fnc_generateID, tilbautATM],
+	["Westpac Bank ATM ", [] call RPP_fnc_generateID, nanchukATM],
+	["Westpac Bank ATM ", [] call RPP_fnc_generateID, chalnikATM],
+	["Westpac Bank ATM", [] call RPP_fnc_generateID, DrozhinoATM],
+	["Police ATM ", [] call RPP_fnc_generateID, pATM]
 ];
 
 /* Open bank dialog */
@@ -103,27 +113,6 @@ RPP_fnc_withdrawBnk =
     };
  
     [] call RPP_fnc_updateBankDlg;
-};
-
-/* Get the total amount of money the player has */
-RPP_fnc_getTotalWealth = {
-	private ["_amount", "_cash"];
-	_amount = RPP_var_bankAmount;
-	_cash = _this;
-	
-	/* Get money from storages */
-	{
-		_obj = _x;
-		_storeMoney = [_obj, "Money"] call RPP_fnc_getTrunkItemAmount;
-		_amount = _amount + _storeMoney;
-	} forEach RPP_var_storages;
-
-	/* We want to get add the players cash into the wealth too */
-	if (_cash) then {
-		_amount = _amount + "Money" call RPP_fnc_itemGetAmount;
-	};
-
-	_amount
 };
 
 /* Deposit money into bank */
@@ -212,6 +201,18 @@ RPP_fnc_robBank =
         /* Player requires a weapon */
         localize "STRS_bank_needWeapon" call RPP_fnc_hint;
     };
+    if((player call RPP_fnc_isCop)) exitWith
+    {
+        //TODO: Localize string to hint to cop.
+        //localize "STRS_bank_copRob" call RPP_fnc_hint;
+        //debug line here
+        hint "Cops can't rob bank";
+    };
+    
+    if( [player,"FlashlightPistol"] call RPP_fnc_hasWeaponClass ) exitWith
+    {
+        localize "STRS_bank_needWeapon" call RPP_fnc_hint;
+    };
     
     _robAmount = RPP_var_robAmount;
     _amount = _robAmount;
@@ -244,12 +245,16 @@ RPP_fnc_startRobbing =
     /* Message started robbing */
     
     (format[localize "STRS_bank_bankStarted", _amount]) call RPP_fnc_hint;
+	
+	sleep 170;
     
     _isRobbing = true;
     _totalRobbed = 0;
     while {((alive player) && (_isRobbing))} do
+	
+	
     {
-        if ((_totalRobbed >= _amount) || (player distance mainBank >= 20)) exitWith
+        if ((_totalRobbed >= _amount) || (player distance mainBank >= 10)) exitWith
         {
             _isRobbing = false;
             ["Money", _totalRobbed] call RPP_fnc_addInventoryItem;
@@ -283,7 +288,7 @@ RPP_fnc_clientsRobBank =
     
     RPP_var_bankRobTime = time;
     
-    _loseAmount = (ceil(RPP_var_bankAmount / 8));
+    _loseAmount = (ceil(RPP_var_bankAmount / 100));
     
     RPP_var_bankAmount = RPP_var_bankAmount - _loseAmount;
     
