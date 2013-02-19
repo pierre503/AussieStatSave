@@ -21,43 +21,11 @@ RPP_var_shops =
     [shop_caroldb, "Volha_1_TK_CIV_EP1", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],
     [shop_caroldw, "Volha_2_TK_CIV_EP1", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],
     
-	/* Classic Cars */
-	[shop_monaco, "monaco", "", [0,0], [] call RPP_fnc_generateID, 0, true, true],
-    [shop_roadrunner2, "roadrunner2", "", [0,0], [] call RPP_fnc_generateID, 0, true, true],
-    [shop_barcuda, "barcuda", "", [0,0], [] call RPP_fnc_generateID, 0, true, true],
-    [shop_fury, "fury", "", [0,0], [] call RPP_fnc_generateID, 0, true, true],
-    [shop_challenger, "challenger", "", [0,0], [] call RPP_fnc_generateID, 0, true, true],
-    [shop_civic, "civic", "", [0,0], [] call RPP_fnc_generateID, 0, true, true],
-    [shop_roadrunner, "roadrunner", "", [0,0], [] call RPP_fnc_generateID, 0, true, true],
-    [shop_cuda, "cuda", "", [0,0], [] call RPP_fnc_generateID, 0, true, true],
-	//[shop_car_m5, "rpp_m5", "", [0, 0], [] call RPP_fnc_generateID, 0, true, false],
-	
-		/* Easten Airpot */
-	[shop_air_usec_bell206_2, "usec_bell206_2", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-    [shop_air_qantas_C130, "qantas_C130", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-	[shop_air_usec_bell206_1, "usec_bell206_1", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-	[shop_air_GNT_C185F, "GNT_C185F", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-	[shop_air_kyo_microlight_blue, "kyo_microlight_blue", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-    [shop_air_kyo_microlight, "kyo_microlight", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-	[shop_air_kyo_microlight_yellow, "kyo_microlight_yellow", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-	
-	/* Westen Airpot */
-	[shop2_air_usec_bell206_2, "usec_bell206_2", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-   	[shop2_air_airnz_C130, "airnz_C130", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-    [shop2_air_usec_bell206_1, "usec_bell206_1", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-	[shop2_air_GNT_C185F, "GNT_C185F", "", [0,0], [] call RPP_fnc_generateID, 0, true, true],
-	[shop2_air_kyo_microlight_blue, "kyo_microlight_blue", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-    [shop2_air_kyo_microlight, "kyo_microlight", "", [0,0], [] call RPP_fnc_generateID, 0, true, true],
-	[shop2_air_kyo_microlight_yellow, "kyo_microlight_yellow", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-	[shop2_usec_bell206_uscg, "usec_bell206_uscg", "", [0,0], [] call RPP_fnc_generateID, 0, false, true],
+
+,
+
     	
-	/* Police Car Shop */
-	[shop_Copcar, "Copcar", "", [0,0], [] call RPP_fnc_generateID, 99, true, true],
-    [shop_CopcarHW2, "CopcarHW2", "", [0,0], [] call RPP_fnc_generateID, 99, true, true],
-	[shop_swat_suv, "SUV_TK_CIV_EP1", "", [0,0], [] call RPP_fnc_generateID, 99, true, true],
-	[shop_cop_qin_black, "qin_evoix_black", "", [0,0], [] call RPP_fnc_generateID, 99, true, true],
-	[shop_cop_monaro_black, "Civcarsl", "", [0,0], [] call RPP_fnc_generateID, 99, true, true],
-	
+
 	/* Police Item Shop */
 	[shop_police_map, "ItemMap", "", [0, 0], [] call RPP_fnc_generateID, 250, true, true],
     [shop_police_compass, "ItemCompass", "", [0, 0], [] call RPP_fnc_generateID, 250, true, true],
@@ -75,10 +43,7 @@ RPP_var_shops =
 	[shop_police_bottleWater, "High_bottleWater", "", [0, 0], [] call RPP_fnc_generateID, 45, true, true],
 	
 	/* Police Weapon Shop */
-	[shop_police_tazer, "x26", "", [0, 0], [] call RPP_fnc_generateID, 999, true, true],
-	[shop_police_tazer_mag, "x26_mag", "", [0, 0], [] call RPP_fnc_generateID, 999, true, true],
-	[shop_police_stunshotgun, "M1014", "", [0, 0], [] call RPP_fnc_generateID, 999, true, true],
-	[shop_police_stunshotgun_mag, "8Rnd_B_Beneli_74Slug", "", [0, 0], [] call RPP_fnc_generateID, 999, true, true],
+	
 	
     /* Pickup shop */
     [shop_pickup, "datsun1_civil_1_open", "", [0,0], [] call RPP_fnc_generateID, 2, true, true],
