@@ -106,7 +106,7 @@ RPP_var_goods =
    
     
 	//Police Cars
-	
+	//Class ref LadaLM, UAZ_RU, HMMWV_M1035_DES_EP1, should find some others the first is the default police car the        //second is a UAZ after that we have the Utility Humvee Im going to add an M113 and some other things
 	
     //Pickups
     ["datsun1_civil_1_open", ["VEHICLE", "CAR"], ["Datsun Open (Blue)", "No Desc"], [18580, 9600], 150, "core\items\noUse.sqf", 300, true, [1, [ ["IronBar", 18],["Tyre", 4], ["Rubber", 20], ["Copper", 15], ["Vinyl" , 6], ["ElecComp", 5]]], false],
