@@ -260,21 +260,33 @@ RPP_fnc_acc_start =
         RPP_var_acc_login = 0;
     };
     
-    sleep 0.5;
+       sleep 0.5;
 	
-    _introCam = "camera" camCreate [10001.95,-95596.97,1013.62];
+    _introCam = "camera" camCreate (position player);
     _introCam cameraEffect ["Internal", "BACK"];
-	showCinemaBorder false;
-    _introCam camPrepareTarget [10001.95,-95596.97,1013.62];
-    _introCam camPreparePos [6168.65,4325.08,38.35];
-    _introCam camPrepareFOV 0.700;
+
+	_camPositions = [
+						[[-37451.94,92567.28,-28064.00],[14369.59,12310.70,66.65],0.953],//TBD
+						[[49769.75,94350.88,-45407.60],[14012.14,12782.32,12.88],0.953],//TBD
+						[[-7941.26,100795.72,44022.39],[14742.31,13873.98,24.38],0.953],//tower
+						[[114772.44,-14890.64,10168.63],[19458.93,13609.04,6.32],0.953],//lighthouse
+						[[22475.93,-82702.50,-34941.32],[14304.03,10614.75,14.88],0.953],//bridge
+						[[-73044.02,47514.46,-34561.14],[14010.97,12631.88,64.60],0.953],//mine
+						[[24877.29,109299.09,-12204.73],[12462.95,10826.25,22.38],0.953],//lighthouse2
+						[[-1541.14,108707.76,-21088.00],[11714.01,11882.68,78.59],0.953],//mountain
+						[[91785.69,-48112.60,-2290.78],[10221.59,9686.95,1.69],1.118]//church thing
+					];
+
+	_introCamSelect = _camPositions select (floor random (count _camPositions));
+    _introCam camPrepareTarget (_introCamSelect select 0);
+    _introCam camPreparePos (_introCamSelect select 1);
+    _introCam camPrepareFOV (_introCamSelect select 2);
     _introCam camCommitPrepared 0;
 
     waitUntil {camCommitted _introCam};
     showCinemaBorder false;
-	endLoadingScreen;
     sleep 2;
-    cutText ["Welcome to Aussie Life: Reloaded!\nPlease wait while the server finishes loading.\nIt is expected to take a while, so please be patient.", "PLAIN DOWN", 25];
+    cutText ["Welcome to Aussie Life: Stats Save!\nPlease wait while the server finishes loading.\nIt is expected to take a while, so please be patient.", "PLAIN DOWN", 25];
     enableEnvironment false;
     waitUntil {server getVariable ["loaded",false]};
     enableEnvironment true;
