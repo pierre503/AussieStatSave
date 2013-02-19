@@ -1,0 +1,9 @@
+#define var(name) private #name; name
+#define array_add(array,value) array set [count array,value]
+#define runSQF(path) call compile preprocessFileLineNumbers path
+#define runSqf(path) runSQF(path)
+#define runsqf(path) runSQF(path)
+#define uinGet(name) (uiNamespace getVariable name)
+#define uinget(name) uinGet(name)
+#define uinSet(name,value) uiNamespace setVariable [name,value]
+#define uinset(name,value) uinSet(name,value)
