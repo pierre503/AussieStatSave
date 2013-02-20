@@ -21,10 +21,7 @@ RPP_var_shops =
     [shop_caroldb, "Volha_1_TK_CIV_EP1", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],
     [shop_caroldw, "Volha_2_TK_CIV_EP1", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],
     
-
-,
-
-    	
+   	
 
 	/* Police Item Shop */
 	[shop_police_map, "ItemMap", "", [0, 0], [] call RPP_fnc_generateID, 250, true, true],
@@ -137,11 +134,7 @@ RPP_var_shops =
         
     /* Objects */
     [shop_cowshed, "Land_Farm_Cowshed_c", "", [0,0], [] call RPP_fnc_generateID, 25, true, false],
-	[shophouse1, "Land_MBG_GER_RHUS_4", "", [0, 0], [] call RPP_fnc_generateID, 1, true, false],
-	[shophouse2, "Land_MBG_GER_RHUS_3", "", [0, 0], [] call RPP_fnc_generateID, 1, true, false],
-	[shophouse3, "Land_MBG_GER_RHUS_5", "", [0, 0], [] call RPP_fnc_generateID, 1, true, false],
-	[shophouse4, "Land_MBG_GER_RHUS_2", "", [0, 0], [] call RPP_fnc_generateID, 1, true, false],
-    
+	    
     /* Pistol shop */
     [shop_m9, "M9", "", [0, 0], [] call RPP_fnc_generateID, 2, true, true],
     [shop_m9mag, "15Rnd_9x19_M9", "", [0, 0], [] call RPP_fnc_generateID, 16, true, true],
