@@ -184,9 +184,6 @@ waitUntil {scriptDone _script};
 _script = [] execVM "core\phone.sqf";
 waitUntil {scriptDone _script};
 
-_script = [] execVM "core\rte.sqf";
-waitUntil {scriptDone _script};
-
 _script = [] execVM "core\monitor.sqf";
 waitUntil {scriptDone _script};
 
