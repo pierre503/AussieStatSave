@@ -145,9 +145,7 @@ RPP_var_goods =
    	["7Rnd_45ACP_1911", ["MAGAZINE", "PISTOL"], ["7Rnd M1911 .45 ACP Mag", "No Desc"], [560, 300], 0.5, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 1], ["Copper",1]]], false],
 	["M1014", ["WEAPON", "PISTOL"], ["M1014", "No Desc"], [2800, 1500], 5, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 8], ["Copper",1]]], true],
    	["8Rnd_B_Beneli_74Slug", ["MAGAZINE", "PISTOL"], ["8Rnds BeanBag Non-Lethal", "No Desc"], [560, 300], 0.5, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 1], ["Copper",1]]], true],
-   	["x26", ["WEAPON", "PISTOL"], ["X26 Tazer", "No Desc"], [1780, 900], 5, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 1], ["Copper",1], ["ElecComp",1]]], true],
-   	["x26_mag", ["MAGAZINE", "PISTOL"], ["X26 Cartridge", "No Desc"], [560, 300], 0.5, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 1], ["Copper",1], ["ElecComp",1]]], true],
-       
+          
  	/* Bushes/Seeds/Trees */
     ["mari_seed", ["ITEM", "SPROUT"], ["Marihuana Seed", "No Desc"], [50,5], 0, "core\items\sprout.sqf", 0, true, [], true],
 	["cocaine_seed", ["ITEM", "SPROUT"], ["Cocaine Seeds", "No Desc"], [50,5], 0, "core\items\sprout.sqf", 0, true, [], true],

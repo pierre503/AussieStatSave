@@ -320,10 +320,10 @@ RPP_fnc_acc_start =
         if (RPP_var_firstConnect) then
         {
             player addweapon "Makarov";
-            player addmagazine "8Rnd_9x18_Makarov";
-            player addmagazine "8Rnd_9x18_Makarov";
-            player addmagazine "8Rnd_9x18_Makarov";
-            player addmagazine "8Rnd_9x18_Makarov";
+            player addmagazine "8Rnd_9x18_MakarovSD";
+			player addmagazine "8Rnd_9x18_MakarovSD";
+			player addmagazine "8Rnd_9x18_MakarovSD";
+			player addmagazine "8Rnd_9x18_MakarovSD";
             ['Handcuffs', 1] call RPP_fnc_addInventoryItem;
             ['High_bottleWater', 1] call RPP_fnc_addInventoryItem;
 			['Keychain', 1] call RPP_fnc_addInventoryItem;
