@@ -266,15 +266,8 @@ RPP_fnc_acc_start =
     _introCam cameraEffect ["Internal", "BACK"];
 
 	_camPositions = [
-						[[-37451.94,92567.28,-28064.00],[14369.59,12310.70,66.65],0.953],//TBD
-						[[49769.75,94350.88,-45407.60],[14012.14,12782.32,12.88],0.953],//TBD
-						[[-7941.26,100795.72,44022.39],[14742.31,13873.98,24.38],0.953],//tower
-						[[114772.44,-14890.64,10168.63],[19458.93,13609.04,6.32],0.953],//lighthouse
-						[[22475.93,-82702.50,-34941.32],[14304.03,10614.75,14.88],0.953],//bridge
-						[[-73044.02,47514.46,-34561.14],[14010.97,12631.88,64.60],0.953],//mine
-						[[24877.29,109299.09,-12204.73],[12462.95,10826.25,22.38],0.953],//lighthouse2
-						[[-1541.14,108707.76,-21088.00],[11714.01,11882.68,78.59],0.953],//mountain
-						[[91785.69,-48112.60,-2290.78],[10221.59,9686.95,1.69],1.118]//church thing
+						[[-91591.21,5630.45,-304.25],[8359.02,2474.72,13.86],0.700],//Light House
+						[[72536.38,77869.45,2054.59],[6845.19,2503.53,43.138],0.700]//Star
 					];
 
 	_introCamSelect = _camPositions select (floor random (count _camPositions));
@@ -326,13 +319,14 @@ RPP_fnc_acc_start =
          
         if (RPP_var_firstConnect) then
         {
-            player addweapon "x26";
-            player addmagazine "x26_mag";
-            player addmagazine "x26_mag";
-            player addmagazine "x26_mag";
-            player addmagazine "x26_mag";
+            player addweapon "Makarov";
+            player addmagazine "8Rnd_9x18_Makarov";
+            player addmagazine "8Rnd_9x18_Makarov";
+            player addmagazine "8Rnd_9x18_Makarov";
+            player addmagazine "8Rnd_9x18_Makarov";
             ['Handcuffs', 1] call RPP_fnc_addInventoryItem;
-            ['cl_Spikestrip', 1] call RPP_fnc_addInventoryItem;
+            ['High_bottleWater', 1] call RPP_fnc_addInventoryItem;
+			['Keychain', 1] call RPP_fnc_addInventoryItem;
 						
         };
         

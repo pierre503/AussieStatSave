@@ -4,7 +4,7 @@ Copyright (C) 2011  Matthew Simms
 */
 
 serverCommand "#lock";
-RPP_Debug = false;
+RPP_Debug = true;
 RPP_Mission_Version = 0.6;
 RPP_Intro = true;
 RPP_QuickTest = false;
