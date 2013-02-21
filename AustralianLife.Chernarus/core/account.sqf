@@ -3,7 +3,6 @@
 RPP_fnc_acc_login = 
 {
     private ["_id", "_exists", "_password"];
-	showCinemaBorder false;
     createDialog "RPP_Dlg_Login";
     _id = getPlayerUID player;
     _exists = _this select 0;
@@ -105,7 +104,6 @@ RPP_fnc_acc_clientLogin =
     RPP_var_acc_login = getPlayerUID player;
     RPP_var_isLoggingIn = true;
     closeDialog 0;
-	showCinemaBorder false;
     sleep 1;
     cutText ["Logging into account, please wait...", "PLAIN DOWN", 1];
     sleep 2;
@@ -113,9 +111,9 @@ RPP_fnc_acc_clientLogin =
     [{
         if (isServer) then
         {
-            [(_this select 0), RPP_var_saving_clientToLoad] spawn RPP_fsav_clientRequestLoad; 
+            [(_this select 0), (_this select 1)] call RPP_fsav_clientRequestLoad; 
         };
-    }, [RPP_var_acc_login]] spawn RPP_fnet_execPublic;
+    }, [RPP_var_acc_login, RPP_var_saving_clientToLoad]] call RPP_fnet_execPublic;
     sleep 4;
     cutText ["Loading storages...", "PLAIN DOWN", 1];
     [{  
@@ -149,22 +147,9 @@ RPP_fnc_acc_clientLogin =
     cutText ["Logged in!", "PLAIN DOWN", 3];
     sleep 3;
     cutText ["", "PLAIN DOWN", 3];
-
-	if (("Keychain" call RPP_fnc_itemGetAmount) <= 0) then {
-		['Keychain', 1] call RPP_fnc_addInventoryItem;
-	};
     
     RPP_var_isLoggingIn = false;
     RPP_var_loggedIn = true;
-
-	/* Activate all light sources */
-	[] spawn RPP_fnc_activateLights;
-
-	/* Sync weather */
-	["RPP_fnc_syncWeather", []] call RPP_fnet_execPublic;
-
-	/* Sync time */
-	["RPP_fnc_syncTime", []] call RPP_fnet_execPublic;
 };
 
 RPP_fnc_acc_exists = 
@@ -250,8 +235,6 @@ RPP_fnc_acc_serverGetPassword =
 RPP_fnc_acc_start = 
 {
     playMusic "BAF_Track01";
-	progressLoadingScreen 0.99;
-	showCinemaBorder false;
     2 fadeSound 0;
     10 fadeMusic 1;
     
@@ -260,14 +243,21 @@ RPP_fnc_acc_start =
         RPP_var_acc_login = 0;
     };
     
-       sleep 0.5;
+    sleep 0.5;
 	
     _introCam = "camera" camCreate (position player);
     _introCam cameraEffect ["Internal", "BACK"];
 
 	_camPositions = [
-						[[-91591.21,5630.45,-304.25],[8359.02,2474.72,13.86],0.700],//Light House
-						[[72536.38,77869.45,2054.59],[6845.19,2503.53,43.138],0.700]//Star
+						[[-37451.94,92567.28,-28064.00],[14369.59,12310.70,66.65],0.953],//cop base
+						[[49769.75,94350.88,-45407.60],[14012.14,12782.32,12.88],0.953],//bank
+						[[-7941.26,100795.72,44022.39],[14742.31,13873.98,24.38],0.953],//tower
+						[[114772.44,-14890.64,10168.63],[19458.93,13609.04,6.32],0.953],//lighthouse
+						[[22475.93,-82702.50,-34941.32],[14304.03,10614.75,14.88],0.953],//bridge
+						[[-73044.02,47514.46,-34561.14],[14010.97,12631.88,64.60],0.953],//mine
+						[[24877.29,109299.09,-12204.73],[12462.95,10826.25,22.38],0.953],//lighthouse2
+						[[-1541.14,108707.76,-21088.00],[11714.01,11882.68,78.59],0.953],//mountain
+						[[91785.69,-48112.60,-2290.78],[10221.59,9686.95,1.69],1.118]//church thing
 					];
 
 	_introCamSelect = _camPositions select (floor random (count _camPositions));
@@ -279,7 +269,7 @@ RPP_fnc_acc_start =
     waitUntil {camCommitted _introCam};
     showCinemaBorder false;
     sleep 2;
-    cutText ["Welcome to Welcome to Steak 'n Beer: The Australian Life Stats Save!\nPlease wait while the server finishes loading.\nIt is expected to take a while, so please be patient.", "PLAIN DOWN", 25];
+    cutText ["Welcome to the Steak and Beer mission!\nPlease wait while the server finishes loading.\nIt is expected to take a while, so please be patient.", "PLAIN DOWN", 25];
     enableEnvironment false;
     waitUntil {server getVariable ["loaded",false]};
     enableEnvironment true;
@@ -319,18 +309,16 @@ RPP_fnc_acc_start =
          
         if (RPP_var_firstConnect) then
         {
-            player addweapon "Makarov";
-            player addmagazine "8Rnd_9x18_MakarovSD";
-			player addmagazine "8Rnd_9x18_MakarovSD";
-			player addmagazine "8Rnd_9x18_MakarovSD";
-			player addmagazine "8Rnd_9x18_MakarovSD";
+            player addweapon "x26";
+            player addmagazine "x26_mag";
+            player addmagazine "x26_mag";
+            player addmagazine "x26_mag";
+            player addmagazine "x26_mag";
             ['Handcuffs', 1] call RPP_fnc_addInventoryItem;
-            ['High_bottleWater', 1] call RPP_fnc_addInventoryItem;
-			['Keychain', 1] call RPP_fnc_addInventoryItem;
+            ['Spikestrip', 1] call RPP_fnc_addInventoryItem;
 						
         };
         
-		['Keychain', 1] call RPP_fnc_addInventoryItem;
 		player addweapon "ItemMap";
     }
     else
@@ -339,10 +327,13 @@ RPP_fnc_acc_start =
         {
             "Civ" spawn RPP_fnc_runIntro;
             
-            if ((player call RPP_fnc_isEMS)) then
+            if ((player call RPP_fnc_isemt)) then
             {
-                ['MedicalBag', 1] call RPP_fnc_addInventoryItem;
-			};      
-		}; 
+                ['MedicalBag', 5] call RPP_fnc_addInventoryItem;
+			};
+			      
+		};
+    
     };
+	["Keychain", 1] call RPP_fnc_addInventoryItem;
 };

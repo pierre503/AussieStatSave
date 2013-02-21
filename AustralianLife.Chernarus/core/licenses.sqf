@@ -1,0 +1,171 @@
+/*
+The Roleplay Project: Reloaded
+Copyright (C) 2011  Matthew Simms
+Copyright (C) 2012	Charles "Templar" McLellan (cpmjr1@gmail.com)
+*/
+
+RPP_var_licenseShops = 
+[
+    [license_a, "A", 500],
+    [license_b, "B", 1200],
+	[license_c, "C", 8000],
+	[license_d, "D", 15000],
+	[license_e, "E", 15000],
+	[license_ula, "ULA", 2500],
+	[license_lsa, "LSA", 25000],
+	[license_hta, "HTA", 40000],
+	[license_boat, "BOAT", 1500],
+	[license_fis, "FIS", 200],
+	[license_ag, "AG", 20000],
+	[license_tx, "TX", 800],
+	[license_hnt, "HNT", 2000],
+	[license_acl, "ACL", 2500],
+	[license_tdr, "TDR", 35000],
+	[license_sec, "SEC", 50000],
+	[license_dip, "DIP", 1000000],
+	[license_pistol, "PIS", 12000],
+	[license_semiautogun, "SAG", 75000],
+    [license_turbine, "TEA", 100000]
+];
+
+RPP_var_licenses =
+[
+    ["A", "Class A Drivers "],
+    ["B", "Class B Drivers"],
+	["C", "Class C Drivers"],
+	["D", "Class D Drivers"],
+	["E", "Class E Drivers"],
+	["ULA", "Ultra Light Aircraft"],
+	["LSA", "Light Sport Aircraft"],
+	["HTA", "Heavy Transport Aircraft"],
+    ["TEA", "Turbine Engine Aircraft"],
+	["BOAT", "Boat Operator"],
+	["FIS", "Fishing Permit"],
+	["AG", "Weapons Dealer Permit"],
+	["TX", "Taxi Permit"],
+	["HNT", "Hunting Permit"],
+	["ACL", "Agricultural Permit"],
+	["TDR", "Traders Permit"],
+	["SEC", "Private Security"],
+	["DIP", "Diplomatic Protection Service"],
+	["PIS", "Pistol License"],
+	["SAG", "Semi Automatic Rifle License"],
+    ["TEA", "Turbine Engine Airplane License"]
+];
+
+RPP_var_playerLicenses = [];
+
+RPP_fnc_getLicenseName = 
+{
+    private ["_class", "_return"];
+    _class = _this;
+    _return = "";
+    
+    {
+        if (_x select 0 == _class) exitWith
+        {
+            _return = (_x select 1);
+        };
+    } forEach RPP_var_licenses;
+
+    _return
+};
+
+RPP_fnc_purchaseLicense =
+{
+    private ["_obj", "_class", "_price", "_money", "_name"];
+    _obj = _this select 0;
+    _class = _this select 1;
+    _price = _this select 2;
+    _money = "Money" call RPP_fnc_itemGetAmount;
+    _name = _class call RPP_fnc_getLicenseName;
+    
+    if (_money < _price) exitWith
+    {
+        /* No money */
+        (format[localize "STRS_license_noMoney", _name, _money]) call RPP_fnc_hint;
+    };
+    
+    if (_class call RPP_fnc_hasLicense) exitWith
+    {
+        /* Already own license */
+        localize "STRS_license_alreadyOwn" call RPP_fnc_hint;
+    };
+    
+    /* Its ok to buy, remove money and add license */
+    (format[localize "STRS_license_purchase", _name, _price]) call RPP_fnc_hint;
+    ["Money", -(_price)] call RPP_fnc_addInventoryItem;
+    _class call RPP_fnc_addLicense;
+};
+
+RPP_fnc_addLicense = 
+{
+    private ["_class"];
+    _class = _this;
+    
+    if (not (_class call RPP_fnc_hasLicense)) then
+    {
+        RPP_var_playerLicenses set[(count RPP_var_playerLicenses), _class];
+        [RPP_var_saving_tableLicenses, ["RPP_var_playerLicenses", RPP_var_acc_login], RPP_var_playerLicenses] call RPP_fsav_clientRequestSave;
+    };
+};
+
+RPP_fnc_hasLicense = 
+{
+    private ["_class", "_found"];
+    _class = _this;
+    _found = false;
+    
+    _found = _class in RPP_var_playerLicenses;
+    
+    _found
+};
+
+RPP_fnc_setupLicenseShops = 
+{
+    {
+        _price = _x select 2;
+        _licenseID = (_x select 1);
+        _name = _licenseID call RPP_fnc_getLicenseName;
+        _id = [] call RPP_fnc_generateID;
+        _obj = _x select 0;
+        
+        _text = format["<t size='0.55' color='#008000'>%1</t><br/><t size='0.45' color='#FEE5AC'>$%2</t><br/><t size='0.4'>(Press F to buy)<br/></t><t size='0.4'></t>", _name, _price];
+        _onKeyAccess = "";
+        
+        _onAdd = format[
+        '
+            [%2, "%1", %3, 0.9, 20, false] call RPP_fnc_create3DText;
+            [%3] spawn
+            {
+                _onTarget = false;
+                while {player distance (_this select 0) <= 20} do
+                {
+                    if (cursorTarget == (_this select 0)) then
+                    {
+                        [33, "[%3, ""%4"", %5] call RPP_fnc_purchaseLicense;", false, false, false] spawn RPP_fnc_addKeyAction;
+                        _onTarget = true;
+                    }
+                    else
+                    {
+                        if (_onTarget && (cursorTarget != (_this select 0))) then
+                        {
+                            _onTarget = false;
+                            [33, false, false, false ] spawn RPP_fnc_remKeyAction;
+                        };
+                    };
+                    sleep 0.001;
+                };
+                [33, false, false, false ] spawn RPP_fnc_remKeyAction;
+            };
+
+        ', _text, _id, _obj, _licenseID, _price];
+
+        _onRem = format[
+        '
+             %1 call RPP_fnc_disable3DText;
+        ', _id];
+
+        [player, vehicle player, compile format['(player distance %1 <= 20)', _obj], _onAdd, _id, _onRem] call RPP_fnc_addAction;
+    } forEach RPP_var_licenseShops;
+};
