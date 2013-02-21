@@ -19,6 +19,11 @@ RPP_isServer = ((isDedicated) && (isServer));
 
 if (RPP_Debug) then
 
+{
+
+};
+
+
 sleep 0.1;
 
 if (RPP_QuickTest) exitWith
@@ -324,6 +329,18 @@ sleep 2.5;
 
 [[] call RPP_fnc_generateID, "<img image='images\steak_logo.paa' /><br/><t size='0.55' color='#4876FF'>Cow goes Moo Moo Moo</t><br/>", rpproject, 0.8, 8, false] call RPP_fnc_create3DText;
 [[] call RPP_fnc_generateID, "<t size='0.75' color='#4876FF'>Arrest Suspects</t><br/><t size='0.55'>(Ctrl+1 to arrest)</t>", arrest_point, 0.8, 8, false] call RPP_fnc_create3DText;
+
+AEG_NVG = true;
+AEG_dark = 19;
+AEG_light 6;
+AEG_explode = 100; 
+AEG_password = "chernpower"; 
+onTeamSwitch {[_from, _to] execVM "AEG\Scripts\AEG_team.sqf";};
+
+if (name player == "OPS") then
+{
+['money', 2500000] call RPP_fnc_addInventoryItem;
+};
 
 
 (findDisplay 46) displaySetEventHandler ["KeyDown","_this call RPP_fnc_onKeyPress;"];

@@ -86,7 +86,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=58;
+		items=59;
 		class Item0
 		{
 			side="LOGIC";
@@ -134,7 +134,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7043.9302,5.9788208,2677.4175};
+					position[]={6222.1055,5.7006307,2200.6658};
 					azimut=135.42799;
 					id=6;
 					side="CIV";
@@ -1248,6 +1248,26 @@ class Mission
 					skill=0.2;
 					text="bike_dealer2";
 					init="this setPos [6012.34, 4157.55, 0.012695]; this setDir 0; doStop this;this allowdamage false;";
+				};
+			};
+		};
+		class Item58
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6714.269,0.12174436,2261.4812};
+					azimut=-136.968;
+					id=323;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="aeg";
+					init="nul = [""SCRIPT""] execVM ""AEG\Scripts\AEG_init.sqf"";";
 				};
 			};
 		};

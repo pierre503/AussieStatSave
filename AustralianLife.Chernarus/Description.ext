@@ -14,11 +14,13 @@ respawnDelay = 10;
 persistent = 1;
 
 #include "includes.hpp"
+#include "AEG\Dialogs\AEG_Dialogs.hpp"
 
 class CfgSounds
 {
     sounds[] = {};   
-
+	#include "AEG\Sounds\AEG_Sounds.hpp"
+	
     class SndLockcar
     {
         name = "";
