@@ -83,4 +83,10 @@ class CfgSounds
         sound[] = { "sounds\Siren_Short.ogg", 1, 1};
         titles[] = {};
     };
+	class PD
+	{
+		name = "PD"; // Name for mission editor
+		sound[] = {\sounds\PD.ogg, db + 0, 1.0};
+		titles[] = {0, ""};
+	};
 };

@@ -82,6 +82,11 @@ RPP_fnc_onKeyPress =
     {
         (vehicle player) call RPP_fsiren_toggle;
     };
+	
+	if (_key == 20) then //This Is Police Despartment
+	{
+        execVM "core\pd.sqf";
+	};
     
     if (_key == 23) then //Inventory
     {
