@@ -2,6 +2,7 @@
 The Roleplay Project: Reloaded
 Copyright (C) 2011  Matthew Simms
 Copyright (C) 2012	Charles "Templar" McLellan (cpmjr1@gmail.com)
+Copyright (C) 2013  Steak 'n Beer
 */
 
 RPP_var_buyDelay = 0.5;
@@ -9,7 +10,34 @@ RPP_var_buyLastUsed = time;
 
 RPP_var_shops = 
 [
-    /* Car shop (Bagango, Shifty's Car Shop) */
+   /* Cop Vehicle Shop */
+	[shop_policecar, "SUV_UN_EP1", "", [0,0], [] call RPP_fnc_generateID, 4, false, true],
+	[shop_coppickup, "hilux1_civil_3_open_EP1", "", [0,0], [] call RPP_fnc_generateID, 4, false, true],
+	[shop_policeheli, "UH1H_TK_EP1", "", [0,0], [] call RPP_fnc_generateID, 4, false, true],
+	
+   /* Police Equipment */
+    [shop_police_bottle, "Bottle", "", [0, 0], [] call RPP_fnc_generateID, 1, true, true],
+   	[shop_police_bottleWater, "High_bottleWater", "", [0, 0], [] call RPP_fnc_generateID, 145, false, true],
+	[shop_police_soup, "Soup", "", [0, 0], [] call RPP_fnc_generateID, 150, false, true],
+	[shop_police_donut, "Donut", "", [0, 0], [] call RPP_fnc_generateID, 50, false, true],
+	[shop_police_watch, "ItemWatch", "", [0, 0], [] call RPP_fnc_generateID, 250, false, true],
+	[shop_police_phone, "Phone", "", [0, 0], [] call RPP_fnc_generateID, 250, false, true],
+	[shop_police_handcuffs, "Handcuffs", "", [0, 0], [] call RPP_fnc_generateID, 250, false, true],
+	[shop_police_map, "ItemMap", "", [0, 0], [] call RPP_fnc_generateID, 250, false, true],
+	[shop_police_compass, "ItemCompass", "", [0, 0], [] call RPP_fnc_generateID, 250, false, true],
+	[shop_police_refuel, "RefuelCan", "", [0, 0], [] call RPP_fnc_generateID, 250, false, true],
+    [shop_police_repair, "RepairKit", "", [0, 0], [] call RPP_fnc_generateID, 250, false, true],
+    [shop_police_lockpick, "Lockpick", "", [0, 0], [] call RPP_fnc_generateID, 250, false, true],
+	[shop_police_crowbar, "Crowbar", "", [0, 0], [] call RPP_fnc_generateID, 250, false, true],
+    [shop_police_gps, "ItemGPS", "", [0, 0], [] call RPP_fnc_generateID, 250, false, true],
+	
+   /* Police Weapons */
+	[shop_police_tazer, "x26", "", [0, 0], [] call RPP_fnc_generateID, 999, false, true],
+	[shop_police_tazer_mag, "x26_mag", "", [0, 0], [] call RPP_fnc_generateID, 999, false, true],
+	[shop_police_stunshotgun, "M1014", "", [0, 0], [] call RPP_fnc_generateID, 999, false, true],
+	[shop_police_stunshotgun_mag, "8Rnd_B_Beneli_74Slug", "", [0, 0], [] call RPP_fnc_generateID, 999, false, true],    
+  
+  /* Car shop (Bagango, Shifty's Car Shop) */
     [shop_carwhite, "Skoda", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],
     [shop_carred, "SkodaRed", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],
     [shop_cargreen, "SkodaGreen", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],

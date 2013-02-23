@@ -101,8 +101,12 @@ RPP_var_goods =
     ["Whale", ["ITEM", "FISH"], ["Whale", "No Description"], [3000,750], 20, "core\items\food.sqf", 0, true, [], true],
     ["Swordfish", ["ITEM", "FISH"], ["Swordfish", "No Description"], [3000,750], 11, "core\items\food.sqf", 0, true, [], false],
    
-    /* Air */
+    /* Police Vehicles */
+	["SUV_UN_EP1", ["VEHICLE", "CAR"], ["Police Suburban", "No Description"], [7500, 1875], 850, "core\items\noUse.sqf", 250, true, [1, [ ["IronBar", 2],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 1]]], true],
+	["hilux1_civil_3_open_EP1", ["VEHICLE", "CAR"], ["Police 4x4", "No Description"], [7500, 1875], 850, "core\testing.sqf", 250, true, [1, [ ["IronBar", 2],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 1]]], true],
+	["UH1H_TK_EP1", ["VEHICLE", "AIR"], ["Police Helicopter", "No Desc"], [160000, 90000], 1450, "core\items\noUse.sqf", 200, true, [1, [ ["IronBar", 120],["Tyre", 4], ["Rubber", 80], ["Copper", 70], ["Leather" , 30], ["ElecComp", 100], ["AdvChipset", 30], ["Glass", 20]]], false],	
 	
+    /* Air */
 
     /*Cars*/
     ["Skoda", ["VEHICLE", "CAR"], ["Skoda White", "No Description"], [10000, 2500], 800, "core\items\noUse.sqf", 300, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],

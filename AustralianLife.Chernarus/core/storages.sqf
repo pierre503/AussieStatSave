@@ -7,14 +7,14 @@ Copyright (C) 2012	Charles "Templar" McLellan (cpmjr1@gmail.com)
 RPP_var_storages = 
 [
     [local_storage1, "Private Storage", 0, false],
-	[local_storage2, "Cop Storage", 0, false],
+	[cop_spawn_local, "Cop Storage", 0, false],
+	[cop_spawn_public, "Police Evidence Locker", 10000, true],
 	[local_storage3, "Aircraft Storage", 0, false],
     [local_storage4, "Cargo Ship Storage", 0, false],
     [local_storage5, "Small Boat Storage", 0, false],
 	[local_storagenaf, "Aircraft Storage", 0, false],
     [public_storage1, "Public Storage", 10000, true],
-	[public_storage2, "Police Evidence Locker", 10000, true],
-    [public_storage3, "Diplomatic Service Storage", 1000, true],
+	[public_storage3, "Diplomatic Service Storage", 1000, true],
     [item_factory_storage, "Item Factory Storage", 0, false],
     [moonshine_storage, "Moonshine Storage", 0, false],
     [manufacturing_plant_storage,"Manufacturing Plant Storage", 0, false],
