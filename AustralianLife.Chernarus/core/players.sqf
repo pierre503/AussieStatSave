@@ -11,19 +11,25 @@ if (isServer) then /* Setup server variables */
 
 RPP_var_civilians = 
 [
-    "Civ2"
+    "Civ1", "Civ2", "Civ3", "Civ4",
+    "Civ5", "Civ6", "Civ7", "Civ8",
+    "Civ9", "Civ10", "Civ11", "Civ12",
+    "Civ13", "Civ14", "Civ15", "Civ16"
    
 ];
 
 RPP_var_cops = 
 [
-    "COP1"
+    "Cop1", "Cop2", "Cop3", "Cop4",
+    "Cop5", "Cop6", "Cop7", "Cop8",
+    "Cop9", "Cop10", "Cop11", "Cop12",
+    "Cop13", "Cop14", "Cop15", "Cop16"
     
 ];
 
 RPP_var_emt = 
 [
-    "emt1"
+    "Paramedic1", "Paramedic2", "FireFighter1", "FireFighter2"
 ];
 
 
