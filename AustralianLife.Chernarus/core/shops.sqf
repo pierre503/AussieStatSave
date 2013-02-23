@@ -37,6 +37,20 @@ RPP_var_shops =
 	[shop_police_stunshotgun, "M1014", "", [0, 0], [] call RPP_fnc_generateID, 999, false, true],
 	[shop_police_stunshotgun_mag, "8Rnd_B_Beneli_74Slug", "", [0, 0], [] call RPP_fnc_generateID, 999, false, true],    
   
+  /* Elektro Bike Shop */
+    [shop2_bike1, "Old_bike_TK_CIV_EP1", "", [0, 0], [] call RPP_fnc_generateID, 10, true, true],
+    [shop2_bike2, "Old_moto_TK_Civ_EP1", "", [0, 0], [] call RPP_fnc_generateID, 10, true, true],
+    [shop2_bike3, "TT650_TK_CIV_EP1", "", [0, 0], [] call RPP_fnc_generateID, 30, true, true],
+	
+   /* Pistol shop */
+    [shop_m9, "M9", "", [0, 0], [] call RPP_fnc_generateID, 12, true, true],
+    [shop_m9mag, "15Rnd_9x19_M9", "", [0, 0], [] call RPP_fnc_generateID, 116, true, true],
+    [shop_colt1911, "Colt1911", "", [0, 0], [] call RPP_fnc_generateID, 12, true, true],
+    [shop_colt1911mag, "7Rnd_45ACP_1911", "", [0, 0], [] call RPP_fnc_generateID, 116, true, true],
+	
+  /* Real Estate */
+    [shop_cowshed, "Land_Farm_Cowshed_c", "", [0,0], [] call RPP_fnc_generateID, 25, true, false],
+	
   /* Car shop (Bagango, Shifty's Car Shop) */
     [shop_carwhite, "Skoda", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],
     [shop_carred, "SkodaRed", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],

@@ -20,9 +20,33 @@ _RPP_var_itemFactory =
 	["Fishing_net", ["manufacture", 20, 980]]
 ];
 
+_SNB_var_truckFactory = 
+[	
+	//Trucks
+	["Kamaz", ["manufacture", 40, 1650]],
+	["KamazOpen", ["manufacture", 40, 1650]],
+	["UralCivil", ["manufacture", 30, 1400]],
+	["UralCivil2", ["manufacture", 30, 1400]],
+	["UralOpen_INS", ["manufacture", 30, 1400]],
+	["MTVR", ["manufacture", 45, 2250]],
+	["V3S_Salvage_TK_GUE_EP1", ["manufacture", 30, 1400]],
+	
+	//Pickups
+	["datsun1_civil_1_open", ["manufacture", 20, 980]],
+	["datsun1_civil_2_covered", ["manufacture", 20, 980]],
+	["datsun1_civil_3_open", ["manufacture", 20, 980]],
+	["hilux1_civil_1_open", ["manufacture", 25, 1240]],
+	["hilux1_civil_2_covered", ["manufacture", 25, 1240]],
+	["hilux1_civil_3_open", ["manufacture", 25, 1240]],
+	["LandRover_CZ_EP1", ["manufacture", 20, 980]],
+	["LandRover_TK_CIV_EP1", ["manufacture", 20, 980]]
+	
+];
+
 RPP_var_factoryDefine = 
 [
- [item_factory, "Item Factory", item_factory_storage, _RPP_var_itemFactory]
+ [item_factory, "Item Factory", item_factory_storage, _RPP_var_itemFactory],
+ [heavy_car_factory, "Heavy Vehicle Factory", heavy_car_factory_storage, _SNB_var_truckFactory]
 ];
 
 RPP_fnc_openFactory =

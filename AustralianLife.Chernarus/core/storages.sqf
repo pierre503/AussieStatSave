@@ -9,6 +9,8 @@ RPP_var_storages =
     [local_storage1, "Private Storage", 0, false],
 	[cop_spawn_local, "Cop Storage", 0, false],
 	[cop_spawn_public, "Police Evidence Locker", 10000, true],
+	[heavy_car_factory_storage, "Truck Plant Storage", 0, false],
+	
 	[local_storage3, "Aircraft Storage", 0, false],
     [local_storage4, "Cargo Ship Storage", 0, false],
     [local_storage5, "Small Boat Storage", 0, false],

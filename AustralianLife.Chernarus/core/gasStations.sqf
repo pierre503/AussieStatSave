@@ -4,7 +4,7 @@ Copyright (C) 2011  Matthew Simms
 Copyright (C) 2012	Charles "Templar" McLellan (cpmjr1@gmail.com)
 */
 
-RPP_var_gasStations = [ [gas1, "Arar Fuel"], [gas2, "Schnell Fuel"], [gas3, "Oxygen Fuel"], [gas4, "Schnell Fuel"], [gas5, "Schnell Fuel"],
+RPP_var_gasStations = [ [gas1, "Arar Fuel"], [gas2, "Schnell Fuel"], [gas3, "Oxygen Fuel"], [gas4, "Schnell Fuel"], [gas5, "Elektro Fuel"],
 						[gas6, "Arar Fuel"], [gas7, "Schnell Fuel"], [gas8, "Oxygen Fuel"], [gas9,"Oxygen Fuel"],
                         [madgas1, "Arar Fuel"], [madgas2, "Schnell Fuel"], [madgas3, "Oxygen Fuel"], [madgas4, "Schnell Fuel"], [madgas5, "Schnell Fuel"],
 						[madgas6, "Arar Fuel"], [madgas7, "Schnell Fuel"], [madgas8, "Oxygen Fuel"], [madgas9,"Oxygen Fuel"]
