@@ -40,13 +40,72 @@ _SNB_var_truckFactory =
 	["hilux1_civil_3_open", ["manufacture", 25, 1240]],
 	["LandRover_CZ_EP1", ["manufacture", 20, 980]],
 	["LandRover_TK_CIV_EP1", ["manufacture", 20, 980]]
-	
+];
+
+_SNB_var_carFactory = 
+[
+	//Cars
+	["Skoda", ["manufacture", 8, 750]],
+	["SkodaRed", ["manufacture", 8, 750]],
+	["SkodaBlue", ["manufacture", 8, 750]],
+	["SkodaGreen", ["manufacture", 8, 750]],
+	["VWGolf", ["manufacture", 15, 900]],
+	["car_hatchback", ["manufacture", 10, 820]],
+	["car_sedan", ["manufacture", 10, 820]],
+	["Lada1_TK_CIV_EP1", ["manufacture", 10, 820]],
+	["Lada2_TK_CIV_EP1", ["manufacture", 10, 820]],
+	["Volha_1_TK_CIV_EP1", ["manufacture", 10, 820]],
+	["Volha_2_TK_CIV_EP1", ["manufacture", 10, 820]]
+];
+
+_SNB_var_manufacturingPlant =
+[
+	["Tyre", ["manufacture", 5, 400]],
+	["RefuelCan", ["manufacture", 20, 980]],
+	["AdvChipset", ["manufacture", 40, 1650]],
+	["ElecComp", ["manufacture", 20, 980]],
+	["Plank", ["manufacture", 1, 570]],
+	["Nails", ["manufacture", 1, 280]],
+	["Screws", ["manufacture", 1, 280]],
+	["Tempered Glass", ["manufacture", 5, 410]],
+	["Windshield", ["manufacture", 10, 870]],
+	["Aggrigate", ["manufacture", 1, 280]],
+	["Concrete", ["manufacture", 10, 870]],
+	["Bottle", ["manufacture", 1, 570]],
+	["Beam", ["manufacture", 5, 400]]
+];
+
+_SNB_var_bikeFactory = 
+[	
+	//Bikes
+	["Old_bike_TK_CIV_EP1", ["manufacture", 1, 280]],
+	["MMT_Civ", ["manufacture", 1, 280]],
+	["Old_moto_TK_Civ_EP1", ["manufacture", 1, 280]],
+	["M1030", ["manufacture", 1, 280]],
+	["TT650_Civ", ["manufacture", 1, 280]],
+	["TT650_Gue", ["manufacture", 1, 280]],
+	["TT650_TK_CIV_EP1", ["manufacture", 1, 280]],
+	["ATV_US_EP1", ["manufacture", 5, 400]]
+];
+
+_SNB_var_airFactory =
+[
+	["usec_bell206_2", ["manufacture", 70, 4250]],
+	["qantas_C130", ["manufacture", 60, 6500]],
+	["airnz_C130", ["manufacture", 55, 4200]],
+	["usec_bell206_1", ["manufacture", 70, 8000]],
+	["GNT_C185F", ["manufacture", 45, 2250]],
+	["FougaMagister4", ["manufacture", 45, 1250]]
 ];
 
 RPP_var_factoryDefine = 
 [
  [item_factory, "Item Factory", item_factory_storage, _RPP_var_itemFactory],
- [heavy_car_factory, "Heavy Vehicle Factory", heavy_car_factory_storage, _SNB_var_truckFactory]
+ [heavy_car_factory, "Heavy Vehicle Factory", heavy_car_factory_storage, _SNB_var_truckFactory],
+ [car_factory, "Vehicle Factory", car_factory_storage, _SNB_var_carFactory],
+ [bike_factory, "Bike Factory", bike_factory_storage, _SNB_var_bikeFactory],
+ [air_factory, "Air Factory", air_factory_storage, _SNB_var_airFactory],
+ [manufacturing_plant, "Manufacturing Plant", manufacturing_plant_storage, _SNB_var_manufacturingPlant]
 ];
 
 RPP_fnc_openFactory =

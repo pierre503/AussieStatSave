@@ -83,7 +83,7 @@ RPP_fnc_onKeyPress =
         (vehicle player) call RPP_fsiren_toggle;
     };
 	
-	if ((_key == 20) && (player call RPP_fnc_isCop) && (player = player)) then //This Is Police Despartment
+	if ((_key == 20) && (player call RPP_fnc_isCop)) then //This Is Police Despartment
 	{
         execVM "core\pd.sqf";
 	};

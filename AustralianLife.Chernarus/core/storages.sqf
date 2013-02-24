@@ -7,19 +7,19 @@ Copyright (C) 2012	Charles "Templar" McLellan (cpmjr1@gmail.com)
 RPP_var_storages = 
 [
     [local_storage1, "Private Storage", 0, false],
+	[public_storage1, "Public Storage", 10000, true],
 	[cop_spawn_local, "Cop Storage", 0, false],
 	[cop_spawn_public, "Police Evidence Locker", 10000, true],
 	[heavy_car_factory_storage, "Truck Plant Storage", 0, false],
+	[lost_property_lot, "Lost Property Storage", 1000, true],
+	[manufacturing_plant_storage,"Manufacturing Plant Storage", 0, false],
+	[bike_factory_storage, "Bike Factory Storage", 0, false],
+	[air_factory_storage, "Air Factory Storage", 0, false],
 	
 	[local_storage3, "Aircraft Storage", 0, false],
     [local_storage4, "Cargo Ship Storage", 0, false],
     [local_storage5, "Small Boat Storage", 0, false],
-	[local_storagenaf, "Aircraft Storage", 0, false],
-    [public_storage1, "Public Storage", 10000, true],
-	[public_storage3, "Diplomatic Service Storage", 1000, true],
-    [item_factory_storage, "Item Factory Storage", 0, false],
-    [moonshine_storage, "Moonshine Storage", 0, false],
-    [manufacturing_plant_storage,"Manufacturing Plant Storage", 0, false],
+	[item_factory_storage, "Item Factory Storage", 0, false],
     [weaponfactory_storage,"Weapon Factory Storage", 0, false],
     [electronic_factory_storage,"Electronic Factory Storage", 0, false],
     [car_factory_storage,"Car Factory Storage", 0, false]

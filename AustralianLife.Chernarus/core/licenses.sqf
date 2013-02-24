@@ -6,51 +6,26 @@ Copyright (C) 2012	Charles "Templar" McLellan (cpmjr1@gmail.com)
 
 RPP_var_licenseShops = 
 [
-    [license_a, "A", 500],
-    [license_b, "B", 1200],
-	[license_c, "C", 8000],
-	[license_d, "D", 15000],
-	[license_e, "E", 15000],
-	[license_ula, "ULA", 2500],
-	[license_lsa, "LSA", 25000],
-	[license_hta, "HTA", 40000],
-	[license_boat, "BOAT", 1500],
-	[license_fis, "FIS", 200],
-	[license_ag, "AG", 20000],
-	[license_tx, "TX", 800],
-	[license_hnt, "HNT", 2000],
-	[license_acl, "ACL", 2500],
-	[license_tdr, "TDR", 35000],
-	[license_sec, "SEC", 50000],
-	[license_dip, "DIP", 1000000],
-	[license_pistol, "PIS", 12000],
-	[license_semiautogun, "SAG", 75000],
-    [license_turbine, "TEA", 100000]
+    [license_car, "car", 1200],
+	[license_boat, "boat", 500],
+	[license_taxi, "taxi", 500],
+	[license_passport, "passport", 300],
+	[license_pistol, "pistol", 15000],
+	[license_semiautogun, "semiautogun", 24200],
+	[license_truck, "truck", 10000],
+	[license_pilot, "pilot", 30000]
 ];
 
 RPP_var_licenses =
 [
-    ["A", "Class A Drivers "],
-    ["B", "Class B Drivers"],
-	["C", "Class C Drivers"],
-	["D", "Class D Drivers"],
-	["E", "Class E Drivers"],
-	["ULA", "Ultra Light Aircraft"],
-	["LSA", "Light Sport Aircraft"],
-	["HTA", "Heavy Transport Aircraft"],
-    ["TEA", "Turbine Engine Aircraft"],
-	["BOAT", "Boat Operator"],
-	["FIS", "Fishing Permit"],
-	["AG", "Weapons Dealer Permit"],
-	["TX", "Taxi Permit"],
-	["HNT", "Hunting Permit"],
-	["ACL", "Agricultural Permit"],
-	["TDR", "Traders Permit"],
-	["SEC", "Private Security"],
-	["DIP", "Diplomatic Protection Service"],
-	["PIS", "Pistol License"],
-	["SAG", "Semi Automatic Rifle License"],
-    ["TEA", "Turbine Engine Airplane License"]
+    ["car", "Class C License"],
+	["boat", "Boat License"],
+	["taxi", "Class T License"],
+	["passport", "Passport"],
+	["pistol", "Pistol License"],
+	["semiautogun", "Semi Automatic Rifle License"],
+	["truck", "Class HR License"],
+	["pilot", "CPL License"]
 ];
 
 RPP_var_playerLicenses = [];

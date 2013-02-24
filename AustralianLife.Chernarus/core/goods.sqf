@@ -26,9 +26,7 @@ RPP_var_goods =
     ["ItemGPS", ["WEAPON", "ITEM"], ["GPS", "No fdescription"], [160, 40], 0, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 1]]], false],
     ["Binocular", ["WEAPON", "ITEM"], ["Binoculars", "No fdescription"], [200, 50], 1, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 1]]], false],
     ["NVGoggles", ["WEAPON", "ITEM"], ["Nightvision", "No fdescription"], [600, 150], 1, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 3]]], false],
-    
-	
-	
+    	
 	/*Police Equipment*/
 	["Handcuffs", ["ITEM", "TOOL"], ["Handcuffs", "No Description"], [20, 5], 1, "core\items\handcuffs.sqf", 0, true, [1,[ ["IronOre", 1]]], false],
     ["Lockpick", ["ITEM", "TOOL"], ["Lockpick", "No Description"], [60, 15], 0.1, "core\items\lockpick.sqf", 0, true, [1, [ ["IronBar", 1]]], false],
@@ -74,7 +72,6 @@ RPP_var_goods =
     ["Smallboat_2", ["VEHICLE", "BOAT"], ["Small Boat 2", "No Description"], [30000, 7500], 1800, "core\items\noUse.sqf", 800, true, [1, [ ["wood", 20], ["IronBar", 5], ["Copper", 5], ["Rubber", 50], ["Leather", 20], ["ElecComp", 4], ["Screws", 150], ["Windshield", 2], ["Beam", 4]]], false],
     ["PBX", ["VEHICLE", "BOAT"], ["PBX", "No Description"], [1200, 300], 80, "core\items\noUse.sqf", 60, true, [1, [ ["IronBar", 1], ["wood", 5]]], false],
     
-
     /* Fishing */
     ["Fishing_rod", ["ITEM", "TOOL"], ["Fishing rod", "No Description"], [100, 25], 2, "core\items\fishingUse.sqf", 0, true, [1, [ ["IronBar", 1], ["wood", 1]]], false],
 	["Fishing_net", ["ITEM", "TOOL"], ["Fishing net", "No Description"], [500, 125], 10, "core\items\fishingUse.sqf", 0, true, [1, [ ["IronBar", 1], ["Rubber", 1]]], false],
@@ -107,22 +104,39 @@ RPP_var_goods =
 	["UH1H_TK_EP1", ["VEHICLE", "AIR"], ["Police Helicopter", "No Desc"], [160000, 90000], 1450, "core\items\noUse.sqf", 200, true, [1, [ ["IronBar", 120],["Tyre", 4], ["Rubber", 80], ["Copper", 70], ["Leather" , 30], ["ElecComp", 100], ["AdvChipset", 30], ["Glass", 20]]], false],	
 	
     /* Air */
-
-    /*Cars*/
+	["Mi17_Civilian", ["VEHICLE", "AIR"], ["Mi17 Civilian", "No Desc"], [290000, 120000], 1450, "core\items\noUse.sqf", 200, true, [1, [ ["IronBar", 120],["Tyre", 4], ["Rubber", 80], ["Copper", 70], ["Leather" , 30], ["ElecComp", 100], ["AdvChipset", 30], ["Glass", 20]]], false],	
+	["Mi17_medevac_RU", ["VEHICLE", "AIR"], ["Mi17 Medevac", "No Desc"], [320000, 220000], 1450, "core\items\noUse.sqf", 200, true, [1, [ ["IronBar", 120],["Tyre", 4], ["Rubber", 80], ["Copper", 70], ["Leather" , 30], ["ElecComp", 100], ["AdvChipset", 30], ["Glass", 20]]], false],
+    ["C130J", ["VEHICLE", "AIR"], ["C130", "No Desc"], [350000, 20000], 272333, "core\items\noUse.sqf", 80000, true, [1, [ ["IronBar", 100],["Tyre", 6], ["Rubber", 100], ["Copper", 120], ["Leather" , 80], ["ElecComp", 150], ["AdvChipset", 60], ["Glass", 40]]], false],
+    ["An2_2_TK_CIV_EP1", ["VEHICLE", "AIR"], ["An2 Civ Aircraft", "No Desc"], [90000, 25000], 100, "core\items\noUse.sqf", 40, true, [1, [ ["IronBar", 80], ["Rubber", 20], ["Copper", 100], ["Leather" , 10], ["ElecComp", 30]]], false],
+	["An2_1_TK_CIV_EP1", ["VEHICLE", "AIR"], ["An2 Civ Aircraft", "No Desc"], [90000, 25000], 100, "core\items\noUse.sqf", 40, true, [1, [ ["IronBar", 80], ["Rubber", 20], ["Copper", 100], ["Leather" , 10], ["ElecComp", 30]]], false],
+    ["MQ9PredatorB", ["VEHICLE", "AIR"], ["MQ9 Predator", "No Desc"], [290000, 120000], 1450, "core\items\noUse.sqf", 200, true, [1, [ ["IronBar", 120],["Tyre", 4], ["Rubber", 80], ["Copper", 70], ["Leather" , 30], ["ElecComp", 100], ["AdvChipset", 30], ["Glass", 20]]], false],	
+	["MV22", ["VEHICLE", "AIR"], ["MV22", "No Desc"], [418000, 220000], 1450, "core\items\noUse.sqf", 200, true, [1, [ ["IronBar", 120],["Tyre", 4], ["Rubber", 80], ["Copper", 70], ["Leather" , 30], ["ElecComp", 100], ["AdvChipset", 30], ["Glass", 20]]], false],
+	["Su34", ["VEHICLE", "AIR"], ["Su34", "No Desc"], [900500, 395000], 272333, "core\items\noUse.sqf", 80000, true, [1, [ ["IronBar", 100],["Tyre", 6], ["Rubber", 100], ["Copper", 120], ["Leather" , 80], ["ElecComp", 150], ["AdvChipset", 60], ["Glass", 40]]], false],
+	["CH_47F_EP1", ["VEHICLE", "AIR"], ["Chinook", "No Desc"], [750500, 395000], 272333, "core\items\noUse.sqf", 80000, true, [1, [ ["IronBar", 100],["Tyre", 6], ["Rubber", 100], ["Copper", 120], ["Leather" , 80], ["ElecComp", 150], ["AdvChipset", 60], ["Glass", 40]]], false],
+	["Mi171Sh_CZ_EP1", ["VEHICLE", "AIR"], ["Mi 171", "No Desc"], [418000, 220000], 1450, "core\items\noUse.sqf", 200, true, [1, [ ["IronBar", 120],["Tyre", 4], ["Rubber", 80], ["Copper", 70], ["Leather" , 30], ["ElecComp", 100], ["AdvChipset", 30], ["Glass", 20]]], false],
+	["MH60S", ["VEHICLE", "AIR"], ["MH60S", "No Desc"], [260000, 50000], 440, "core\items\noUse.sqf", 120, true, [1, [ ["IronBar", 110], ["Rubber", 80], ["Copper", 100], ["Leather" , 20], ["ElecComp", 90], ["AdvChipset", 22], ["Glass", 10]]], false],
+	["Mi17_INS", ["VEHICLE", "AIR"], ["Mi17", "No Desc"], [190000, 25000], 100, "core\items\noUse.sqf", 40, true, [1, [ ["IronBar", 80], ["Rubber", 20], ["Copper", 100], ["Leather" , 10], ["ElecComp", 30]]], false],
+	
+   /*Cars*/
     ["Skoda", ["VEHICLE", "CAR"], ["Skoda White", "No Description"], [10000, 2500], 800, "core\items\noUse.sqf", 300, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
     ["SkodaRed", ["VEHICLE", "CAR"], ["Skoda Red", "No Description"], [10000, 2500], 800, "core\items\noUse.sqf", 300, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
     ["SkodaBlue", ["VEHICLE", "CAR"], ["Skoda Blue", "No Description"], [9500, 2375], 800, "core\items\noUse.sqf", 300, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
     ["SkodaGreen", ["VEHICLE", "CAR"], ["Skoda Green", "No Description"], [10000, 2500], 800, "core\items\noUse.sqf", 300, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
     ["VWGolf", ["VEHICLE", "CAR"], ["VW Golf", "No Description"], [13000, 3250], 1050, "core\items\noUse.sqf", 250, true, [1, [ ["IronBar", 8],["Tire", 4], ["Rubber", 10], ["Copper", 4], ["ElecComp", 2]]], false],
     ["car_hatchback", ["VEHICLE", "CAR"], ["Hatchback", "No Description"], [12000, 3000], 900, "core\items\noUse.sqf", 350, true, [1, [ ["IronBar", 5],["Tire", 4], ["Rubber", 10], ["Copper", 4], ["ElecComp", 2]]], false],
-    ["car_sedan", ["VEHICLE", "CAR"], ["Sedan", "No Description"], [12000, 3000], 900, "core\items\noUse.sqf", 350, true, [1, [ ["IronBar", 5],["Tire", 4], ["Rubber", 10], ["Copper", 4], ["ElecComp", 2]]], false],
+	["Lada1", ["VEHICLE", "CAR"], ["Vas Red", "No Description"], [10000, 2500], 750, "core\items\noUse.sqf", 320, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
+    ["Lada2", ["VEHICLE", "CAR"], ["Vas White", "No Description"], [10000, 2500], 750, "core\items\noUse.sqf", 320, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
+	["UAZ_CDF", ["VEHICLE", "CAR"], ["UAZ Army", "No Description"], [19000, 12500], 750, "core\items\noUse.sqf", 320, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
+    ["UAZ_INS", ["VEHICLE", "CAR"], ["UAZ Army", "No Description"], [19000, 12500], 750, "core\items\noUse.sqf", 320, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
+	["car_sedan", ["VEHICLE", "CAR"], ["Sedan", "No Description"], [12000, 3000], 900, "core\items\noUse.sqf", 350, true, [1, [ ["IronBar", 5],["Tire", 4], ["Rubber", 10], ["Copper", 4], ["ElecComp", 2]]], false],
     ["Lada1_TK_CIV_EP1", ["VEHICLE", "CAR"], ["Lada Green", "No Description"], [10000, 2500], 750, "core\items\noUse.sqf", 320, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
     ["Lada2_TK_CIV_EP1", ["VEHICLE", "CAR"], ["Lada Decorated", "No Description"], [10000, 2500], 750, "core\items\noUse.sqf", 320, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
     ["Volha_1_TK_CIV_EP1", ["VEHICLE", "CAR"], ["Old Car (Blue)", "No Description"], [7500, 1875], 850, "core\items\noUse.sqf", 250, true, [1, [ ["IronBar", 2],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 1]]], false],
     ["Volha_2_TK_CIV_EP1", ["VEHICLE", "CAR"], ["Old Car (White)", "No Description"], [7500, 1875], 850, "core\items\noUse.sqf", 250, true, [1, [ ["IronBar", 2],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 1]]], false],
     ["SUV_TK_EP1", ["VEHICLE", "CAR"], ["Suburban", "No Description"], [40000,10000], 1800, "core\items\noUse.sqf", 750, true, [], false, [true, "singleBlue", [[[0, 0.1, 0.3], [0, 0, 1], 0.4]]]],
 	["GLT_M300_LT", ["VEHICLE", "CAR"], ["Lada Cab", "No Description"], [10000, 2500], 750, "core\items\noUse.sqf", 320, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
-	
+	["VolhaLimo_TK_CIV_EP1", ["VEHICLE", "CAR"], ["Volha Limo", "No Description"], [40000,10000], 1800, "core\items\noUse.sqf", 750, true, [], false, [true, "singleBlue", [[[0, 0.1, 0.3], [0, 0, 1], 0.4]]]],
+	["S1203_TK_CIV_EP1", ["VEHICLE", "CAR"], ["Shag'n Wagon", "No Description"], [10000, 2500], 750, "core\items\noUse.sqf", 320, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
 	
 	/*SUVS*/
 	
@@ -169,10 +183,7 @@ RPP_var_goods =
 	["M4A1_Aim", ["WEAPON", "RIFLE"], ["M4 CCO", "No Description"], [15000, 3750], 3, "core\items\noUse.sqf", 10, true, [1, [ ["IronBar", 10], ["Rubber", 4], ["Copper",4], ["ElecComp", 4]]], false],
 	["huntingrifle", ["WEAPON", "RIFLE"], ["CZ550", "Hunting Rifle"], [20000, 5000], 3, "core\items\noUse.sqf", 10, true, [1, [ ["wood", 10], ["IronBar", 10], ["Rubber", 4], ["Copper",4], ["AdvChipset", 1]]], false],
     
-    
-   
-	
-	/* Ammo */
+    /* Ammo */
 	/* Pistol */
 	["15Rnd_9x19_M9", ["MAGAZINE", "PISTOL"], ["M9 Magazine", "No Description"], [200, 50], 0.1, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 1]]], false],
    	["7Rnd_45ACP_1911", ["MAGAZINE", "PISTOL"], ["7Rnd M1911 .45 ACP Mag", "No Description"], [220, 55], 0.1, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 1]]], false],
@@ -191,10 +202,7 @@ RPP_var_goods =
 	["30Rnd_9x19_MP5SD", ["MAGAZINE", "RIFLE"], ["MP5 and TMP SD Mag", "No Description"], [1000, 250], 0.5, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 3]]], false],
 	["20Rnd_556x45_Stanag", ["MAGAZINE", "RIFLE"], ["STANAG 20rd", "No Description"], [800, 200], 0.5, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 3]]], false],
 
-	
-	
-	
- 	/* Bushes/Seeds/Trees */
+	/* Bushes/Seeds/Trees */
     ["mari_seed", ["ITEM", "SPROUT"], ["Marihuana Seed", "No Description"], [100,25], 0, "core\items\sprout.sqf", 0, true, [], true],
 	["cocaine_seed", ["ITEM", "SPROUT"], ["Cocaine Seeds", "No Description"], [200,50], 0, "core\items\sprout.sqf", 0, true, [], true],
     ["apple_seed", ["ITEM", "SPROUT"], ["Apple Seed", "No Description"], [12,3], 0, "core\items\sprout.sqf", 0, true, [], false],
@@ -261,7 +269,7 @@ RPP_var_goods =
 	["Bricks", ["ITEM", "RESOURCE"], ["Bricks", "No Description"], [700,175], 2, "core\items\noUse.sqf", 0, true, [], false],
 	["Petrol", ["ITEM", "RESOURCE"], ["Petrol", "No Description"], [280,70], 1, "core\items\noUse.sqf", 0, true, [], false],
 	["Rubber", ["ITEM", "RESOURCE"], ["Rubber", "No Description"], [380,95], 1, "core\items\noUse.sqf", 0, true, [], false],
-	["Tire", ["ITEM", "RESOURCE"], ["Rubber Tire", "No Description"], [560,140], 5, "core\items\noUse.sqf", 0, true, [2, [["Rubber", 2],["IronBar", 1]]], false],
+	["Tyre", ["ITEM", "RESOURCE"], ["Rubber Tyre", "No Description"], [560,140], 5, "core\items\noUse.sqf", 0, true, [2, [["Rubber", 2],["IronBar", 1]]], false],
 	["Leather", ["ITEM", "RESOURCE"], ["Leather", "No Description"], [140,35], 5, "core\items\noUse.sqf", 0, true, [], false],
 	["Vinyl", ["ITEM", "RESOURCE"], ["Vinyl", "No Description"], [160,40], 2, "core\items\noUse.sqf", 0, true, [], false],
 	
