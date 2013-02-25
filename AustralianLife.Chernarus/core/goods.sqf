@@ -178,6 +178,7 @@ RPP_var_goods =
    	["M9", ["WEAPON", "PISTOL"], ["M9", "No Description"], [2000, 500], 2, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 3], ["Rubber", 2], ["Copper",1] ] ], false],
    	["Colt1911", ["WEAPON", "PISTOL"], ["Colt 1911", "WW2 Favorite"], [2200, 550], 2, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 3], ["Rubber", 2], ["Copper",1] ] ], false],
    	/*Stun*/
+	["Makarov", ["WEAPON", "PISTOL"], ["Taser", "No Description"], [5000, 1250], 5, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 5], ["Rubber", 2], ["Copper",2]]], true],
 	["M1014", ["WEAPON", "RIFLE"], ["M1014", "No Description"], [5000, 1250], 5, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 5], ["Rubber", 2], ["Copper",2]]], true],
    	/*Rifle*/
 	["M4A1_Aim", ["WEAPON", "RIFLE"], ["M4 CCO", "No Description"], [15000, 3750], 3, "core\items\noUse.sqf", 10, true, [1, [ ["IronBar", 10], ["Rubber", 4], ["Copper",4], ["ElecComp", 4]]], false],
@@ -189,7 +190,7 @@ RPP_var_goods =
    	["7Rnd_45ACP_1911", ["MAGAZINE", "PISTOL"], ["7Rnd M1911 .45 ACP Mag", "No Description"], [220, 55], 0.1, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 1]]], false],
 	/* Stun */
 	["8Rnd_B_Beneli_74Slug", ["MAGAZINE", "RIFLE"], ["8Rnds BeanBag Non-Lethal", "No Description"], [400, 100], 0.2, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 2]]], false],
-   	["x26_mag", ["MAGAZINE", "PISTOL"], ["X26 Cartridge", "No Description"], [40, 10], 0.1, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 1]]], false],
+   	["8Rnd_9x18_MakarovSD", ["MAGAZINE", "PISTOL"], ["Tazer Ammo", "No Description"], [40, 10], 0.1, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 1]]], false],
     /* Rifle */
 	["30Rnd_556x45_Stanag", ["MAGAZINE", "RIFLE"], ["STANAG", "No Description"], [400, 100], 0.5, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 3]]], false],
 	["5x_22_LR_17_HMR", ["MAGAZINE", "RIFLE"], ["CZ550 Ammo", "No Description"], [1000, 250], 0.5, "core\items\noUse.sqf", 0, true, [1, [ ["IronBar", 3]]], false],

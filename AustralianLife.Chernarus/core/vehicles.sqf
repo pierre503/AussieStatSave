@@ -188,7 +188,7 @@ RPP_fnc_findVehicle =
 
 RPP_fnc_createVehicle = 
 {
-	private ["_class", "_position", "_registration", "_vcl", "_text", "_name", "_trunk", "_siren", "_hasSiren"];
+	private ["_class", "_position", "_registration", "_vcl", "_text", "_name", "_trunk", "_siren", "_hasSiren", "_texture"];
 	_class = _this select 0;
 	_position = _this select 1;
         _registration = [] call RPP_fnc_generateRegistration;
@@ -204,6 +204,7 @@ RPP_fnc_createVehicle =
         _fuel = 1;
         _siren = _class call RPP_fnc_itemGetSiren;
         _hasSiren = false;
+		_texture = a;
         
         if (count _siren >= 2) then
         {
@@ -229,8 +230,9 @@ RPP_fnc_createVehicle =
 	call compile format
         ['
 	_vcl = "%1" createVehicle %2;
-	_vcl setVehicleInit "this setVehicleVarName ""%3"";
-        
+	
+		_vcl setVehicleInit "this setVehicleVarName ""%3"";
+    
         [this, ""%4""] spawn
         {
             if (isNil ""RPP_fnc_create3DText"") then
@@ -246,6 +248,10 @@ RPP_fnc_createVehicle =
 		_vcl addEventHandler [""GetOut"", {_this spawn RPP_fnc_event_onVehicleExit;}];
         _vcl addEventHandler [""Engine"", {_this spawn RPP_fnc_event_onVehicleEngine;}];
         _vcl setVariable [""hasActions"", true, false];
+		if ((_vcl typeOf "SUV_UN_EP1") || (_vcl typeOf "hilux1_civil_3_open_EP1")) then
+		{
+			_vcl setVehicleInit "this setObjectTexture ""%10"";
+		};
 		
 	";
 	player reveal _vcl;

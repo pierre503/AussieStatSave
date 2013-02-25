@@ -205,7 +205,7 @@ class RPP_Button
     offsetPressedY = 0.002;
     borderSize = 0;
     soundEnter[] = { "", 0, 1 };  // no sound
-    soundPush[] = { "buttonpushed.ogg", 0.1, 1 };
+	soundPush[] = { "buttonpushed.ogg", 0.1, 1 };
     soundClick[] = { "", 0, 1 };  // no sound
     soundEscape[] = { "", 0, 1 };  // no sound
     x = 0.4; y = 0.475;

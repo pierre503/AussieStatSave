@@ -32,8 +32,8 @@ RPP_var_shops =
     [shop_police_gps, "ItemGPS", "", [0, 0], [] call RPP_fnc_generateID, 250, false, true],
 	
    /* Police Weapons */
-	[shop_police_tazer, "x26", "", [0, 0], [] call RPP_fnc_generateID, 999, false, true],
-	[shop_police_tazer_mag, "x26_mag", "", [0, 0], [] call RPP_fnc_generateID, 999, false, true],
+	[shop_police_tazer, "Makarov", "", [0, 0], [] call RPP_fnc_generateID, 999, false, true],
+	[shop_police_tazer_mag, "8Rnd_9x18_MakarovSD", "", [0, 0], [] call RPP_fnc_generateID, 999, false, true],
 	[shop_police_stunshotgun, "M1014", "", [0, 0], [] call RPP_fnc_generateID, 999, false, true],
 	[shop_police_stunshotgun_mag, "8Rnd_B_Beneli_74Slug", "", [0, 0], [] call RPP_fnc_generateID, 999, false, true],    
   

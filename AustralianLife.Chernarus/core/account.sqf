@@ -309,15 +309,13 @@ RPP_fnc_acc_start =
          
         if (RPP_var_firstConnect) then
         {
-            player addweapon "x26";
-            player addmagazine "x26_mag";
-            player addmagazine "x26_mag";
-            player addmagazine "x26_mag";
-            player addmagazine "x26_mag";
+            player addweapon "Makarov";
+            player addmagazine "8Rnd_9x18_MakarovSD";
+            player addmagazine "8Rnd_9x18_MakarovSD";
+            player addmagazine "8Rnd_9x18_MakarovSD";
+            player addmagazine "8Rnd_9x18_MakarovSD";
             ['Handcuffs', 1] call RPP_fnc_addInventoryItem;
-            ['Spikestrip', 1] call RPP_fnc_addInventoryItem;
-						
-        };
+		};
         
 		player addweapon "ItemMap";
     }
@@ -331,7 +329,7 @@ RPP_fnc_acc_start =
             {
                 ['MedicalBag', 5] call RPP_fnc_addInventoryItem;
 			};
-			      
+
 		};
     
     };
