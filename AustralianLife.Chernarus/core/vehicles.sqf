@@ -2,6 +2,7 @@
 The Roleplay Project: Reloaded
 Copyright (C) 2011  Matthew Simms
 Copyright (C) 2012	Charles "Templar" McLellan (cpmjr1@gmail.com)
+Copyright (C) 2013  Steak 'n Beer
 */
 
 RPP_var_vehicleSpeed = 
@@ -188,7 +189,7 @@ RPP_fnc_findVehicle =
 
 RPP_fnc_createVehicle = 
 {
-	private ["_class", "_position", "_registration", "_vcl", "_text", "_name", "_trunk", "_siren", "_hasSiren", "_texture"];
+	private ["_class", "_position", "_registration", "_vcl", "_text", "_name", "_trunk", "_siren", "_hasSiren", "_snbtex"];
 	_class = _this select 0;
 	_position = _this select 1;
         _registration = [] call RPP_fnc_generateRegistration;
@@ -204,8 +205,8 @@ RPP_fnc_createVehicle =
         _fuel = 1;
         _siren = _class call RPP_fnc_itemGetSiren;
         _hasSiren = false;
-		_texture = a;
-        
+		_snbtex = " ";
+		
         if (count _siren >= 2) then
         {
             _hasSiren = _siren select 0;
@@ -214,8 +215,7 @@ RPP_fnc_createVehicle =
         {
             _hasSiren = false;
         };
-        
-        
+                
         if (count _this >= 3) then
         {
             _trunk = (_this select 2);
@@ -226,55 +226,65 @@ RPP_fnc_createVehicle =
             _fuel = (_this select 4) select 0;
             _damage = (_this select 4) select 1;
         };
-        
-	call compile format
-        ['
-	_vcl = "%1" createVehicle %2;
-	
-		_vcl setVehicleInit "this setVehicleVarName ""%3"";
-    
-        [this, ""%4""] spawn
-        {
-            if (isNil ""RPP_fnc_create3DText"") then
-            {
-                _script = [] execVM ""core\text3D.sqf"";
-                waitUntil {scriptDone _script};
-            };
-
-            [[] call RPP_fnc_generateID, (_this select 1), (_this select 0), 0.8, 5, true] spawn RPP_fnc_create3DText;
-        };
-		_vcl = this;
-		_vcl addEventHandler [""GetIn"", {_this spawn RPP_fnc_event_onVehicleEnter;}];
-		_vcl addEventHandler [""GetOut"", {_this spawn RPP_fnc_event_onVehicleExit;}];
-        _vcl addEventHandler [""Engine"", {_this spawn RPP_fnc_event_onVehicleEngine;}];
-        _vcl setVariable [""hasActions"", true, false];
-		if ((_vcl typeOf "SUV_UN_EP1") || (_vcl typeOf "hilux1_civil_3_open_EP1")) then
+		
+		if (_class == "hilux1_civil_3_open_EP1") then
 		{
-			_vcl setVehicleInit "this setObjectTexture ""%10"";
+			_snbtex = 'this setObjectTexture [0, ""texture\patrol.paa""];';
 		};
 		
-	";
-	player reveal _vcl;
+		if (_class == "SUV_UN_EP1") then
+		{
+			_snbtex = 'this setObjectTexture [0, ""texture\suv1.paa""];';
+		};
+		
+	call compile format
+        ['
+			
+			_vcl = "%1" createVehicle %2;
+			
+			_vcl setVehicleInit "this setVehicleVarName ""%3""; %9; this setVehicleAmmo 0;
+			
+			[this, ""%4""] spawn
+			{
+				if (isNil ""RPP_fnc_create3DText"") then
+				{
+					_script = [] execVM ""core\text3D.sqf"";
+					waitUntil {scriptDone _script};
+				};
 
-	_vcl setFuelCargo 0;
-        _vcl call RPP_fnc_addVehicleToServer;
-        _vcl call RPP_fnc_addToKeychain;
-        
-        _vcl setVariable ["locked", false, true];
-        _vcl setVariable ["trunk",  %5, true];
-        _vcl setVariable ["maxSize", "%1" call RPP_fnc_itemGetTrunkSize, true];
-        _vcl setVariable ["isPublic", true, true];
-        _vcl setVariable ["RPP_siren_mounted", %8, true];
-		_vcl setVariable ["RPP_siren_state", 0, true];
+				[[] call RPP_fnc_generateID, (_this select 1), (_this select 0), 0.8, 5, true] spawn RPP_fnc_create3DText;
+			};
+		
+			_vcl = this;
+			_vcl addEventHandler [""GetIn"", {_this spawn RPP_fnc_event_onVehicleEnter;}];
+			_vcl addEventHandler [""GetOut"", {_this spawn RPP_fnc_event_onVehicleExit;}];
+			_vcl addEventHandler [""Engine"", {_this spawn RPP_fnc_event_onVehicleEngine;}];
+			_vcl setVariable [""hasActions"", true, false];
+			_code;
+			";
+			player reveal _vcl;
 
-		[{ ClearWeaponCargoglobal (_this select 0); ClearMagazineCargoglobal (_this select 0);}, [_vcl]] call RPP_fnet_execPublic;
+			_vcl setFuelCargo 0;
+				_vcl call RPP_fnc_addVehicleToServer;
+				_vcl call RPP_fnc_addToKeychain;
+        
+				_vcl setVariable ["locked", false, true];
+				_vcl setVariable ["trunk",  %5, true];
+				_vcl setVariable ["maxSize", "%1" call RPP_fnc_itemGetTrunkSize, true];
+				_vcl setVariable ["isPublic", true, true];
+				_vcl setVariable ["RPP_siren_mounted", %8, true];
+				_vcl setVariable ["RPP_siren_state", 0, true];
 
-        _vcl setFuel %7;
-        _vcl setDamage %6;
+			[{ ClearWeaponCargoglobal (_this select 0); ClearMagazineCargoglobal (_this select 0);}, [_vcl]] call RPP_fnet_execPublic;
+
+			_vcl setFuel %7;
+			_vcl setDamage %6;
+			
+			
         
-	processInitCommands; 
-	', _class, _position, _registration, _text, _trunk, _damage, _fuel, _hasSiren];
-        
+			processInitCommands; 
+			', _class, _position, _registration, _text, _trunk, _damage, _fuel, _hasSiren, _snbtex];
+	        
 };
 
 RPP_fnc_getVehicleBoost = 

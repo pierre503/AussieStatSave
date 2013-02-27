@@ -24,7 +24,7 @@ player createDiaryRecord
 player createDiaryRecord
 ["Rules",["Server Rules",
 "<img image=""images\mad_logo.paa""/><br/>
-All players are required to read these rules before playing on the MAD server. Not knowing the rules is not an excuse for breaking them. The rules are subject to change at any time, but advance notice will be given where possible.
+All players are required to read these rules before playing on the Steak 'n Beer server. Not knowing the rules is not an excuse for breaking them. The rules are subject to change at any time, but advance notice will be given where possible.
 <br/>
 <br/>
 1. GENERAL RULES<br/>
@@ -67,7 +67,7 @@ All players are required to read these rules before playing on the MAD server. N
 player createDiaryRecord
 ["Info",["Website",
 "<img image=""images\mad_logo.paa""/><br/>
-http://mad-life.net/<br/>
+http://www.steaknbeer.com/<br/>
 <br/>
 The official home of MAD-LIFE Sahrani.
 "

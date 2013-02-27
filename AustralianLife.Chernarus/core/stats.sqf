@@ -22,7 +22,7 @@ RPP_fnc_openStatsMenu =
 
 RPP_var_admins = 
 [
-    "Unforgiven", "MadVince", "MadOPS", "manbattlefield", "World"
+    "CfsFireFighter", "Twoodz", "ROFLBurger", "Steve", "Dan"
 ];
 
 RPP_fnc_loadStatsMenu = 

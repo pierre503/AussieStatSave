@@ -155,7 +155,7 @@ RPP_fnc_respawn =
     {
         if (player call RPP_fnc_isCop) then
         {
-            _spawn = "cop_respawn";
+			_spawn = "cop_respawn";
         };
      
     player setPos getMarkerpos _spawn;
