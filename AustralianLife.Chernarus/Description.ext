@@ -1,11 +1,11 @@
-onLoadMission = "welcome to Cicida";
+onLoadMission = "welcome to Cherno";
 onLoadIntro = "BetaEVAL";
 
 class Header
 {
     gameType = Team;            //DM, Team, Coop, ...
     minPlayers = 1;             //min # of players the mission supports
-    maxPlayers = 39;            //Max # of players the mission supports
+    maxPlayers = 32;            //Max # of players the mission supports
 };
 
 disabledAI = 1;

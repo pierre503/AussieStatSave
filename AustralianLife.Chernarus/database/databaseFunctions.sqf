@@ -395,7 +395,7 @@ RPP_fsav_clientRequestLoad =
             };
         } forEach _return;
 
-		sleep 1;
+		//sleep 1;
 
     } forEach _tableNames;
 };

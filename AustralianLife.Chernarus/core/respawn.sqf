@@ -4,9 +4,9 @@ Copyright (C) 2011  Matthew Simms
 Copyright (C) 2012	Charles "Templar" McLellan (cpmjr1@gmail.com)
 */
 
-RPP_var_respawnTime = 10; //Default time until player respawns
+RPP_var_respawnTime = 30; //Default time until player respawns
 RPP_var_maxRespawnTime = 300; //Maximum respawn time, respawn time cannot be increased above this value
-RPP_var_respawnIncrease = 1;
+RPP_var_respawnIncrease = 5;
 RPP_var_deaths = 0;
 RPP_var_kills = 0;
 
@@ -157,15 +157,16 @@ RPP_fnc_respawn =
         {
 			_spawn = "cop_respawn";
         };
-     
+	};
     player setPos getMarkerpos _spawn;
     
     [] spawn RPP_fnc_respawnEffect;
+
 };
 
 RPP_fnc_respawnEffect = 
 {
-    titleCut ["","WHITE IN",1];
+	titleCut ["","WHITE IN",1];
     titleText ["", "WHITE IN", 1];
 	
     localize "STRS_player_respawn" call RPP_fnc_hint;
@@ -173,10 +174,18 @@ RPP_fnc_respawnEffect =
 	RPP_var_holstered = false;
 	removeAllWeapons player;
     player addweapon "ItemMap";
+	if (player call RPP_fnc_isCop) then
+    {
+		player setObjectTexture [0, "texture\policeman.paa"];
+		player setObjectTexture [1, "texture\police.paa"];
+		if (player == Cop1) then
+		{
+			player setObjectTexture [0, "texture\policeman.paa"];
+			player setObjectTexture [1, "texture\sergent.paa"];
+		};		
+    };
 	["hunger", 100] call RPP_fnc_setDynamic;
     ["thirst", 100] call RPP_fnc_setDynamic;
-    
-
     "dynamicBlur" ppEffectEnable true;
     _i = 10;
     while {_i != -1} do

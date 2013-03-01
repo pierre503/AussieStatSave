@@ -133,9 +133,9 @@ RPP_var_goods =
     ["Lada2_TK_CIV_EP1", ["VEHICLE", "CAR"], ["Lada Decorated", "No Description"], [10000, 2500], 750, "core\items\noUse.sqf", 320, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
     ["Volha_1_TK_CIV_EP1", ["VEHICLE", "CAR"], ["Old Car (Blue)", "No Description"], [7500, 1875], 850, "core\items\noUse.sqf", 250, true, [1, [ ["IronBar", 2],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 1]]], false],
     ["Volha_2_TK_CIV_EP1", ["VEHICLE", "CAR"], ["Old Car (White)", "No Description"], [7500, 1875], 850, "core\items\noUse.sqf", 250, true, [1, [ ["IronBar", 2],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 1]]], false],
-    ["SUV_TK_EP1", ["VEHICLE", "CAR"], ["Suburban", "No Description"], [40000,10000], 1800, "core\items\noUse.sqf", 750, true, [], false, [true, "singleBlue", [[[0, 0.1, 0.3], [0, 0, 1], 0.4]]]],
+    ["SUV_TK_EP1", ["VEHICLE", "CAR"], ["Suburban", "No Description"], [40000,10000], 1800, "core\items\noUse.sqf", 750, true, [1, [ ["IronBar", 2],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 1]]], false],
 	["GLT_M300_LT", ["VEHICLE", "CAR"], ["Lada Cab", "No Description"], [10000, 2500], 750, "core\items\noUse.sqf", 320, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
-	["VolhaLimo_TK_CIV_EP1", ["VEHICLE", "CAR"], ["Volha Limo", "No Description"], [40000,10000], 1800, "core\items\noUse.sqf", 750, true, [], false, [true, "singleBlue", [[[0, 0.1, 0.3], [0, 0, 1], 0.4]]]],
+	["VolhaLimo_TK_CIV_EP1", ["VEHICLE", "CAR"], ["Volha Limo", "No Description"], [40000,10000], 1800, "core\items\noUse.sqf", 750, true, [1, [ ["IronBar", 2],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 1]]], false],
 	["S1203_TK_CIV_EP1", ["VEHICLE", "CAR"], ["Shag'n Wagon", "No Description"], [10000, 2500], 750, "core\items\noUse.sqf", 320, true, [1, [ ["IronBar", 4],["Tire", 4], ["Rubber", 10], ["Copper", 1], ["ElecComp", 2]]], false],
 	
 	/*SUVS*/

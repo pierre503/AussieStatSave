@@ -573,7 +573,6 @@ RPP_fnc_keyTransferClient =
      
      (format[localize "STRS_item_keychain_receive", name _from]) call RPP_fnc_hint;
 };
-/*
 RPP_fnc_offroad = 
 {
     while {true} do
@@ -609,7 +608,7 @@ RPP_fnc_offroad =
         
         sleep 5;
     };
-};*/
+};
 
 RPP_fnc_keyTransfer = 
 {

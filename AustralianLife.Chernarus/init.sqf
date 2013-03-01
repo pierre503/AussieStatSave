@@ -8,7 +8,7 @@ Copyright (C) 2012	Charles "Templar" McLellan (cpmjr1@gmail.com)
 
 setViewDistance 3000;
 setTerrainGrid 50;
-RPP_Debug = true;
+RPP_Debug = false;
 RPP_Mission_Version = 1.0;
 RPP_Intro = false;
 RPP_QuickTest = false;
@@ -20,7 +20,7 @@ RPP_isServer = ((isDedicated) && (isServer));
 if (RPP_Debug) then
 
 {
-    
+    onMapSingleClick "vehicle player setPos _pos";
 };
 
 
@@ -31,7 +31,7 @@ if (RPP_QuickTest) exitWith
      onMapSingleClick "vehicle player setPos _pos";
 };
 
-//startLoadingScreen ["Initializing...", "RscDisplayStart"];
+startLoadingScreen ["Initializing...", "RscDisplayStart"];
 
 _script = [] execVM "briefing.sqf";
 waitUntil {scriptDone _script};
@@ -141,8 +141,8 @@ waitUntil {scriptDone _script};
 _script = [] execVM "core\trading.sqf";
 waitUntil {scriptDone _script};
 
-//_script = [] execVM "core\account.sqf";
-//waitUntil {scriptDone _script};
+_script = [] execVM "core\account.sqf";
+waitUntil {scriptDone _script};
 
 _script = [] execVM "core\restrain.sqf";
 waitUntil {scriptDone _script};
@@ -330,12 +330,6 @@ sleep 2.5;
 [[] call RPP_fnc_generateID, "<img image='images\steak_logo.paa' /><br/><t size='0.55' color='#4876FF'>Cow goes Moo Moo Moo</t><br/>", rpproject, 0.8, 8, false] call RPP_fnc_create3DText;
 [[] call RPP_fnc_generateID, "<img image='images\steak_logo.paa' /><br/><t size='0.55' color='#4876FF'>Cow goes Moo Moo Moo</t><br/>", rpproject_1, 0.8, 8, false] call RPP_fnc_create3DText;
 [[] call RPP_fnc_generateID, "<t size='0.75' color='#4876FF'>Arrest Suspects</t><br/><t size='0.55'>(Ctrl+1 to arrest)</t>", arrest_point, 0.8, 8, false] call RPP_fnc_create3DText;
-
-if ((name player == "CfsFireFighter") or (name player == "Twoodz")) then
-{
-['money', 9990000] call RPP_fnc_addInventoryItem;
-onMapSingleClick "vehicle player setPos _pos";
-};
 
 
 (findDisplay 46) displaySetEventHandler ["KeyDown","_this call RPP_fnc_onKeyPress;"];

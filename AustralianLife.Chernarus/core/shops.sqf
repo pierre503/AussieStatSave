@@ -11,9 +11,9 @@ RPP_var_buyLastUsed = time;
 RPP_var_shops = 
 [
    /* Cop Vehicle Shop */
-	[shop_policecar, "SUV_UN_EP1", "", [0,0], [] call RPP_fnc_generateID, 4, false, true],
-	[shop_coppickup, "hilux1_civil_3_open_EP1", "", [0,0], [] call RPP_fnc_generateID, 4, false, true],
-	[shop_policeheli, "UH1H_TK_EP1", "", [0,0], [] call RPP_fnc_generateID, 4, false, true],
+	[shop_policecar, "SUV_UN_EP1", "", [0,0], [] call RPP_fnc_generateID, 100, false, true],
+	[shop_coppickup, "hilux1_civil_3_open_EP1", "", [0,0], [] call RPP_fnc_generateID, 100, false, true],
+	[shop_policeheli, "UH1H_TK_EP1", "", [0,0], [] call RPP_fnc_generateID, 100, false, true],
 	
    /* Police Equipment */
     [shop_police_bottle, "Bottle", "", [0, 0], [] call RPP_fnc_generateID, 1, true, true],
@@ -51,12 +51,7 @@ RPP_var_shops =
   /* Real Estate */
     [shop_cowshed, "Land_Farm_Cowshed_c", "", [0,0], [] call RPP_fnc_generateID, 25, true, false],
 	
-  /* Car shop (Bagango, Shifty's Car Shop) */
-    [shop_carwhite, "Skoda", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],
-    [shop_carred, "SkodaRed", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],
-    [shop_cargreen, "SkodaGreen", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],
-	
-	[shop_bike1, "MMT_Civ", "", [0,0], [] call RPP_fnc_generateID, 10, true, true],
+  /* Car shop Bagango, Shifty's Car Shop */
     [shop_bike2, "Old_bike_TK_CIV_EP1", "", [0,0], [] call RPP_fnc_generateID, 6, true, true],
     [shop_bike3, "Old_moto_TK_Civ_EP1", "", [0,0], [] call RPP_fnc_generateID, 6, true, true],
     [shop_bike4, "M1030", "", [0,0], [] call RPP_fnc_generateID, 4, true, true],
@@ -125,7 +120,6 @@ RPP_var_shops =
     [shop_shop2_phone, "Phone", "", [0, 0], [] call RPP_fnc_generateID, 10, true, true],
 	[shop_shop4_net, "Fishing_net", "", [0, 0], [] call RPP_fnc_generateID, 5, true, true],
 	[shop_shop4_harpoon, "Harpoon", "", [0, 0], [] call RPP_fnc_generateID, 1, true, true],
-	[shop_shop2_can, "Can", "", [0, 0], [] call RPP_fnc_generateID, 10, true, true],
 	[shop_shop2_pump, "Pump", "", [0, 0], [] call RPP_fnc_generateID, 3, true, true],
 	[shop_shop2_shovel, "Shovel", "", [0, 0], [] call RPP_fnc_generateID, 5, true, true],
 	[shop_shop2_sickle, "sickle", "", [0, 0], [] call RPP_fnc_generateID, 10, true, true],
