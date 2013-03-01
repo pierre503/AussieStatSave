@@ -8,9 +8,9 @@ Copyright (C) 2012	Charles "Templar" McLellan (cpmjr1@gmail.com)
 
 setViewDistance 3000;
 setTerrainGrid 50;
-RPP_Debug = false;
+RPP_Debug = true;
 RPP_Mission_Version = 1.0;
-RPP_Intro = false;
+RPP_Intro = true;
 RPP_QuickTest = false;
 RPP_Saving = true;
 RPP_isServer = ((isDedicated) && (isServer));
@@ -31,7 +31,7 @@ if (RPP_QuickTest) exitWith
      onMapSingleClick "vehicle player setPos _pos";
 };
 
-startLoadingScreen ["Initializing...", "RscDisplayStart"];
+//startLoadingScreen ["Initializing...", "RscDisplayStart"];
 
 _script = [] execVM "briefing.sqf";
 waitUntil {scriptDone _script};
@@ -141,8 +141,8 @@ waitUntil {scriptDone _script};
 _script = [] execVM "core\trading.sqf";
 waitUntil {scriptDone _script};
 
-_script = [] execVM "core\account.sqf";
-waitUntil {scriptDone _script};
+//_script = [] execVM "core\account.sqf";
+//waitUntil {scriptDone _script};
 
 _script = [] execVM "core\restrain.sqf";
 waitUntil {scriptDone _script};

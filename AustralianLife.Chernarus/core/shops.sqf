@@ -75,7 +75,7 @@ RPP_var_shops =
 	[shop_air_an2, "An2_2_TK_CIV_EP1", "", [0,0], [] call RPP_fnc_generateID, 3, true, true],
 	[shop_air_an2civ, "An2_1_TK_CIV_EP1", "", [0,0], [] call RPP_fnc_generateID, 3, true, false],
 	
-   /* South Airpot */
+   /* North Airpot */
 	[shop_air_mq9, "MQ9PredatorB", "", [0,0], [] call RPP_fnc_generateID, 3, true, false],
    	[shop_air_mv22, "MV22", "", [0,0], [] call RPP_fnc_generateID, 3, true, false],
     [shop_air_su34, "Su34", "", [0,0], [] call RPP_fnc_generateID, 3, true, false],

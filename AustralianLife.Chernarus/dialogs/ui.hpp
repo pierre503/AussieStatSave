@@ -5,7 +5,7 @@ Copyright (C) 2011  Matthew Simms
 
 class RscTitles
 {
-    titles[] = {RPP_Dlg_UI, RPP_Dlg_Progress };
+	titles[] = {RPP_Dlg_UI, RPP_Dlg_Progress};
 
     class RPP_Dlg_UI
     {   

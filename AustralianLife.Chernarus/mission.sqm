@@ -6253,7 +6253,7 @@ class Mission
 		};
 		class Item16
 		{
-			position[]={10099.533,6.0127869,1632.1075};
+			position[]={10091.641,6.0127869,1629.0305};
 			name="cop_respawn";
 			type="Empty";
 			colorName="ColorBlack";
@@ -6271,14 +6271,14 @@ class Mission
 		};
 		class Item18
 		{
-			position[]={6680.8633,6,2290.5337};
+			position[]={8414.7256,163.65462,12235.938};
 			name="respawn_civilian";
 			type="Empty";
 			angle=-136.96779;
 		};
 		class Item19
 		{
-			position[]={10099.397,6.0127869,1632.3861};
+			position[]={8427.8799,156.64983,12228.985};
 			name="respawn_west";
 			type="Empty";
 			angle=-136.96779;

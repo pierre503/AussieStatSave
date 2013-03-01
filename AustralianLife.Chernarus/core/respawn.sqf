@@ -176,12 +176,13 @@ RPP_fnc_respawnEffect =
     player addweapon "ItemMap";
 	if (player call RPP_fnc_isCop) then
     {
-		player setObjectTexture [0, "texture\policeman.paa"];
-		player setObjectTexture [1, "texture\police.paa"];
+		player setVehicleInit "this setObjectTexture [0, ""texture\policeman.paa""]; this setObjectTexture [1, ""texture\police.paa""];";
+		processInitCommands;
+		
 		if (player == Cop1) then
 		{
-			player setObjectTexture [0, "texture\policeman.paa"];
-			player setObjectTexture [1, "texture\sergent.paa"];
+			player setVehicleInit "this setObjectTexture [0, ""texture\policeman.paa""]; this setObjectTexture [1, ""texture\sergent.paa""];";
+			processInitCommands;
 		};		
     };
 	["hunger", 100] call RPP_fnc_setDynamic;

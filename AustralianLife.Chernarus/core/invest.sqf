@@ -7,7 +7,7 @@ RPP_var_investLocations =
 	[classic_dealer, "Classic Car Dealer", [35000, 1750]],
 	[realestate_betty, "Farmer Betty", [50000,2500]],
     [farmer_joe, "Farmer Joe", [10000, 500]],
-	[welfare, "Welfare Check", [10, 100]],
+	[welfare, "Centrelink Check", [10, 100]],
 	[trader_gem, "Gem Trader", [100000, 5000]]
 	
 ];

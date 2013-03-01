@@ -29,7 +29,7 @@ RPP_var_cops =
 
 RPP_var_emt = 
 [
-    "Paramedic1", "Paramedic2", "FireFighter1", "FireFighter2"
+    "EMS1", "EMS2", "EMS3", "EMS4"
 ];
 
 

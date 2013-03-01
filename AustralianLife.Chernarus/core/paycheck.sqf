@@ -4,6 +4,8 @@ RPP_var_income = 0;
 RPP_var_completeIncome = 0;
 RPP_var_shopping = 0;
 RPP_var_other = 0;
+RPP_var_defaultCopPaycheck = 1500;
+RPP_var_defaultEmsPaycheck = 900;
 
 RPP_fnc_runPaycheck = 
 {
@@ -27,6 +29,18 @@ RPP_fnc_runPaycheck =
         {
             _message = "<t color='#4876FF'>Paycheck</t><br/>Your paycheck has arrived!";
             _oldBalance = RPP_var_bankAmount;
+			
+			if (player call RPP_fnc_isCop) then { /* Money for police */
+				RPP_var_income = RPP_var_income + RPP_var_defaultCopPaycheck;
+                RPP_var_completeIncome = RPP_var_completeIncome + RPP_var_defaultCopPaycheck;	
+				_message = _message + format["<br/>Police pay: $%1", RPP_var_defaultCopPaycheck];
+			};
+			
+			if (player call RPP_fnc_isEMS) then { /* Money for Fire/EMS */
+				RPP_var_income = RPP_var_income + RPP_var_defaultEmsPaycheck;
+                RPP_var_completeIncome = RPP_var_completeIncome + RPP_var_defaultEmsPaycheck;	
+				_message = _message + format["<br/>Emergency Services pay: $%1", RPP_var_defaultEmsPaycheck];
+			};
             
             if (RPP_var_jobPaycheck > 0) then /* Money from jobs */
             {

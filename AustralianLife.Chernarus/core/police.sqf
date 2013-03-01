@@ -94,15 +94,49 @@ RPP_fnc_pol_recvTicket = {
 	((findDisplay 2400) displayCtrl 2) ctrlSetStructuredText parseText format["%1", _reason];
 	((findDisplay 2400) displayCtrl 3) ctrlSetStructuredText parseText format["Fine: $%1", _amount];
 	((findDisplay 2400) displayCtrl 1600) buttonSetAction format["[%1, %2, %3] call RPP_fnc_pol_payTicket; closeDialog 0;", _amount, _to, _from];
-	((findDisplay 2400) displayCtrl 1601) buttonSetAction format["closeDialog 0;", _amount, _to, _from];
+	((findDisplay 2400) displayCtrl 1601) buttonSetAction format["[%1, %2, %3] call SNB_fnc_pol_refuseTicket; closeDialog 0;", _amount, _to, _from];
+};
+
+SNB_fnc_pol_refuseTicket = 
+{
+	private ["_amount", "_to", "_from"];
+    _to = _this select 1;
+    _from = _this select 2;
+	if (player == _to) then
+    {
+         format[localize "STRS_ticket_refuse", name _to] call RPP_fnc_hint;
+    };
+    
+    if (player == _from) then
+    {
+        format[localize "STRS_ticket_refuse", name _to] call RPP_fnc_hint;
+    };
+	["SNB_fnc_pol_refuseMessage", [_to, _from]] call RPP_fnet_execPublic;
+};
+
+SNB_fnc_pol_refuseMessage = 
+{
+	private ["_amount", "_to", "_from"];
+    _to = _this select 1;
+    _from = _this select 2;
+	if (player == _to) then
+    {
+         format[localize "STRS_ticket_refuse", name _to] call RPP_fnc_hint;
+    };
+    
+    if (player == _from) then
+    {
+        format[localize "STRS_ticket_refuse", name _to] call RPP_fnc_hint;
+    };
 };
 
 RPP_fnc_pol_paidTicket = {
-	private ["_success", "_cop", "_civ", "_amount"];
+	private ["_success", "_cop", "_civ", "_amount", "_refuse"];
 	_success = _this select 0;
 	_cop = _this select 1;
 	_civ = _this select 2;
 	_amount = _this select 3;
+	_refuse = _this select 4;
 
 	if (!(player call RPP_fnc_isCop)) exitWith {};
  
@@ -132,6 +166,7 @@ RPP_fnc_pol_paidTicket = {
 		format[localize "STRS_ticket_copNoMoney", name _civ] call RPP_fnc_hint;
 
 	};
+	
 };
 
 RPP_fnc_pol_payTicket = {
@@ -323,6 +358,24 @@ RPP_fnc_pol_arrestPlayer =
     closeDialog 0;
 };
 
+SNB_fnc_pol_jumpsuit = 
+{
+    private ["_victim", "_person"];
+    _victim = _this select 0;
+    _person = _this select 1;
+    
+    if (player == _victim) then
+    {
+         _victim setVehicleInit "this setObjectTexture [0, ""texture\detenuto.paa""];";
+		 processInitCommands;
+    };
+    
+    if (player == _person) then
+    {
+        
+    };
+};
+
 RPP_fnc_pol_clientArrest = 
 {
     private ["_victim", "_player", "_arrest"];
@@ -333,18 +386,19 @@ RPP_fnc_pol_clientArrest =
     if (player != _victim) exitWith {};
     
     ["RPP_fnc_pol_disarm", [_victim, _player]] call RPP_fnet_execPublic;
+	["SNB_fnc_pol_jumpsuit", [_victim, _player]] call RPP_fnet_execPublic;
 
     
     closeDialog 0;
     [] spawn
     {
         player action["eject", vehicle player];
-        sleep 1;
+       	sleep 1;
         player setPos getMarkerPos ([] call RPP_fnc_pol_getRandomCell);
     };
     
     [] call RPP_fnc_removeIllegalItems;
-
+	
     ["Hunger", 100] call RPP_fnc_setDynamic;
     ["Thirst", 100] call RPP_fnc_setDynamic;
 
@@ -442,18 +496,20 @@ RPP_fnc_pol_prisonerReleased =
     {
         /* Released */
         server globalchat format[localize "STRS_arrest_released", name _prisoner];
-
+		clearVehicleInit _prisoner;
     }
     else
     {
         /* Released by person */
         server globalchat format[localize "STRS_arrest_earlyRelease", name _prisoner, name _person];
+		
     };
     
     if (_prisoner == player) then
     {
          RPP_var_isArrested = false;
          localize "STRS_arrest_release" call STRS_arrest_release;
+		 clearVehicleInit _prisoner;
          player setpos getMarkerPos "prison_release";
     };
 };
