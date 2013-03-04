@@ -45,8 +45,15 @@ RPP_var_forestry_sprouts =
 	
 	//TIER 4
 	["larix_seed", "TREE", "larix_tree", "MAP_t_larix3s", 20, ["larix_seed", 8, "sickle", "normal"], 15, "Larix Tree", ["forestry", 40, 3250]],
-	["mari_seed", "BUSH", "mari_bush", "AS_p_fiberPlant_EP1", 20, ["mari_seed", 5, "", "normal"], 35, "Marihuana Bush", ["forestry", 15, 1500]],
 	
+	
+	//Drugs
+	["mari_seed", "BUSH", "mari_bush", "AS_p_fiberPlant_EP1", 20, ["mari_seed", 5, "", "normal"], 50, "Marihuana Bush", ["drugs", 1, 1000]],
+	["moon_seed", "BUSH", "moon_bush", "AS_p_fiberPlant_EP1", 20, ["moon_seed", 5, "", "normal"], 45, "Moonshine Skins", ["drugs", 10, 1400]],
+	["mush_seed", "BUSH", "mush_bush", "AS_p_fiberPlant_EP1", 20, ["mush_seed", 5, "", "normal"], 40, "Mushrooms", ["drugs", 15, 1650]],
+	["heri_seed", "BUSH", "heri_bush", "AS_p_fiberPlant_EP1", 20, ["heri_seed", 5, "", "normal"], 30, "Herion Bush", ["drugs", 25, 2000]],
+	["coca_seed", "BUSH", "coca_bush", "AS_p_fiberPlant_EP1", 20, ["coca_seed", 5, "", "normal"], 20, "Coca Bush", ["drugs", 40, 2500]],
+	["lsd_seed", "BUSH", "lsd_bush", "AS_p_fiberPlant_EP1", 20, ["lsd_seed", 5, "", "normal"], 10, "LSD Bush", ["drugs", 55, 3200]],
 	//TIER 5
 	["maple_seed", "TREE", "maple_tree", "MAP_t_carpinis2s", 20, ["maple_seed", 8, "sickle", "normal"], 15, "Maple Tree", ["forestry", 60, 4250]]
 	
@@ -140,9 +147,13 @@ RPP_var_forestry_bushes =
 	["potato_patch", [4,7, "Potato"], [12], 18, 0.5, [300, 0,10], ["forestry", 160], "", "AinvPknlMstpSlayWrflDnon_medic"],
 	["pumpkin_patch", [1,3, "Pumpkin"], [12], 18, 0.5, [300, 0,10], ["forestry", 180], "", "AinvPknlMstpSlayWrflDnon_medic"],
 	["cabbage_patch", [1,3, "Cabbage"], [12], 18, 0.5, [300, 0,10], ["forestry", 80], "", "AinvPknlMstpSlayWrflDnon_medic"],
-	["corn_stock", [1,3, "corn"], [12], 18, 0.5, [60, 0,10], ["forestry", 80], "", "AinvPknlMstpSlayWrflDnon_medic"],
-    ["mari_bush", [1,3, "mari"], [3], 20, 0.5, [300, 0,10], ["forestry", 440], "", "AinvPknlMstpSlayWrflDnon_medic"]
-	
+	["corn_stock", [7,3, "corn"], [12], 18, 0.5, [60, 0,10], ["forestry", 80], "", "AinvPknlMstpSlayWrflDnon_medic"],
+    ["mari_bush", [6,3, "unp_mari"], [5], 20, 0.5, [300, 0,10], ["drugs", 80], "", "AinvPknlMstpSlayWrflDnon_medic"],
+	["moon_bush", [5,3, "unp_moon"], [5], 20, 0.5, [300, 0,10], ["drugs", 160], "", "AinvPknlMstpSlayWrflDnon_medic"],
+	["mush_bush", [4,3, "unp_mush"], [5], 20, 0.5, [300, 0,10], ["drugs", 200], "", "AinvPknlMstpSlayWrflDnon_medic"],
+	["heri_bush", [3,3, "unp_heri"], [5], 20, 0.5, [300, 0,10], ["drugs", 320], "", "AinvPknlMstpSlayWrflDnon_medic"],
+	["coca_bush", [2,3, "unp_coca"], [5], 20, 0.5, [300, 0,10], ["drugs", 500], "", "AinvPknlMstpSlayWrflDnon_medic"],
+	["lsd_bush", [1,3, "unp_lsd"], [3], 20, 0.5, [300, 0,10], ["drugs", 600], "", "AinvPknlMstpSlayWrflDnon_medic"]
 ];
 
 RPP_fnc_forestry_plantSprout = 

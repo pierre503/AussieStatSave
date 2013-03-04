@@ -174,6 +174,7 @@ RPP_fnc_onKeyPress =
                         buttonSetAction [1603, format["[%1] call RPP_fnc_pol_disarmAction;", _curTarget]];
                         buttonSetAction [1604, format["[%1] call RPP_fnc_pol_arrest;", _curTarget]];
                         buttonSetAction [1602, format["%1 call RPP_fnc_search_openDialog;", _curTarget]];
+						buttonSetAction [1605, format["%1 call RPP_fnc_pol_openTicketDlg;", _curTarget]];
                     }
                     else
                     {

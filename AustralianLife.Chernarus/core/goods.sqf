@@ -219,12 +219,28 @@ RPP_var_goods =
 	["corn_seed", ["ITEM", "SPROUT"], ["Corn Seed", "No Description"], [15,6], 0, "core\items\sprout.sqf", 0, true, [], false],
    	
    /*Drugs*/
-    ["mari", ["ITEM", "DRUG"], ["Marijuana", "No Description"], [400,100], 1, "core\items\drugUse.sqf", 0, true, [], true],
-	["cocaine", ["ITEM", "DRUG"], ["Cocaine", "No Description"], [800,200], 1, "core\items\drugUse.sqf", 0, true, [], true],
-	["lsd", ["ITEM", "DRUG"], ["LSD", "No Description"], [1000,250], 1, "core\items\drugUse.sqf", 0, true, [], true],
-	["Stamps", ["ITEM", "DRUG"], ["Cocaine", "No Description"], [2000,500], 1, "core\items\drugUse.sqf", 0, true, [], true],
-	["heroine", ["ITEM", "DRUG"], ["Cocaine", "No Description"], [4000,1000], 1, "core\items\drugUse.sqf", 0, true, [], true],
-    ["Moonshine", ["ITEM", "DRUG"], ["Moonshine", "No Description"], [2000,500], 5, "core\items\drug.sqf", 5, true, [1, [ ["Corn", 4],["Bottle", 1]]], false],	
+   
+    ["mari_seed", ["ITEM", "SPROUT"], ["Marihuana Seed", "No Description"], [100,25], 0, "core\items\sprout.sqf", 0, true, [], true],
+	["moon_seed", ["ITEM", "SPROUT"], ["Moonshine Seeds", "No Description"], [200,50], 0, "core\items\sprout.sqf", 0, true, [], true],
+	["mush_seed", ["ITEM", "SPROUT"], ["Mushroom Seed", "No Description"], [100,25], 0, "core\items\sprout.sqf", 0, true, [], true],
+	["heri_seed", ["ITEM", "SPROUT"], ["Herion Seeds", "No Description"], [200,50], 0, "core\items\sprout.sqf", 0, true, [], true],
+	["coca_seed", ["ITEM", "SPROUT"], ["Cocaine Seed", "No Description"], [100,25], 0, "core\items\sprout.sqf", 0, true, [], true],
+	["lsd_seed", ["ITEM", "SPROUT"], ["LSD Seeds", "No Description"], [200,50], 0, "core\items\sprout.sqf", 0, true, [], true],
+	
+    ["Marijuana", ["ITEM", "DRUG"], ["Marijuana", "No Description"], [1000,300], 1, "core\items\drugUse.sqf", 0, true, [], true],
+	["Moonshine", ["ITEM", "DRUG"], ["Moonshine", "No Description"], [1500,600], 1, "core\items\drugUse.sqf", 0, true, [], true],
+	["Mushrooms", ["ITEM", "DRUG"], ["Mushrooms", "No Description"], [2000,850], 1, "core\items\drugUse.sqf", 0, true, [], true],
+	["Herion", ["ITEM", "DRUG"], ["Herion", "No Description"], [2200,1000], 1, "core\items\drugUse.sqf", 0, true, [], true],
+	["Cocaine", ["ITEM", "DRUG"], ["Cocaine", "No Description"], [2800,1200], 1, "core\items\drugUse.sqf", 0, true, [], true],
+    ["LSD", ["ITEM", "DRUG"], ["LSD", "No Description"], [3000,1500], 5, "core\items\drugUse.sqf", 5, true, [], true],	
+	
+	["unp_mari", ["ITEM", "DRUG"], ["Unprocessed Marijuana", "No Description"], [400,100], 1, "core\items\drugUse.sqf", 0, true, [], true],
+	["unp_moon", ["ITEM", "DRUG"], ["Unprocessed Moonshine", "No Description"], [800,200], 1, "core\items\drugUse.sqf", 0, true, [], true],
+	["unp_mush", ["ITEM", "DRUG"], ["Unprocessed Mushrooms", "No Description"], [1000,250], 1, "core\items\drugUse.sqf", 0, true, [], true],
+	["unp_heri", ["ITEM", "DRUG"], ["Unprocessed Herion", "No Description"], [1500,500], 1, "core\items\drugUse.sqf", 0, true, [], true],
+	["unp_coca", ["ITEM", "DRUG"], ["Unprocessed Cocaine", "No Description"], [2000,600], 1, "core\items\drugUse.sqf", 0, true, [], true],
+    ["unp_lsd", ["ITEM", "DRUG"], ["Unprocessed LSD", "No Description"], [2500,700], 5, "core\items\drug.sqf", 5, true, [], true],	
+	
 	/*Resources*/
 	
 	/* Food Resources */

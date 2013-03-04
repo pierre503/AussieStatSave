@@ -24,5 +24,7 @@ Copyright (C) 2009  Matthew Simms & Petr Klíma
 #include "dialogs\payTicket.hpp"
 #include "dialogs\ticket.hpp"
 
+
+
 /* Configs */
 #include "configs\CfgItems.hpp"

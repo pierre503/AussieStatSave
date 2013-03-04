@@ -6,7 +6,7 @@ Copyright (C) 2012	Charles "Templar" McLellan (cpmjr1@gmail.com)
 
 if (isNil "RPP_var_bankAmount") then
 {
-    RPP_var_bankAmount = 12000;
+    RPP_var_bankAmount = 25000;
 };
 
 RPP_var_banks = 
@@ -193,11 +193,9 @@ RPP_fnc_robBank =
     };
     if((player call RPP_fnc_isCop)) exitWith
     {
-        //TODO: Localize string to hint to cop.
-        //localize "STRS_bank_copRob" call RPP_fnc_hint;
-        //debug line here
-        hint "Cops can't rob bank";
-    };
+        /* Player is a Cop */
+        localize "STRS_bank_copRob" call RPP_fnc_hint;
+	};
     
     if( [player,"FlashlightPistol"] call RPP_fnc_hasWeaponClass ) exitWith
     {

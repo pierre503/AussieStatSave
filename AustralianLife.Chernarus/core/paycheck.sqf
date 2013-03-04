@@ -83,7 +83,7 @@ RPP_fnc_runPaycheck =
             _message = _message + format["<br/>Total Income: $%1<br/>Actual Income: $%2<br/>", RPP_var_income, RPP_var_completeIncome];
             
             RPP_var_income = 0;
-            RPP_var_completeIncome = 100;
+            RPP_var_completeIncome = 0;
             
             _message call RPP_fnc_hint;
         }

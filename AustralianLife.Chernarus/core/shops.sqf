@@ -205,14 +205,20 @@ RPP_var_shops =
     [shop_pbx, "PBX", "", [0,0], [] call RPP_fnc_generateID, 5, true, false],
     	
    /* Drug Sell */
-    [mari_sell, "mari", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-	[cocaine_sell, "cocaine", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
-	[herion_sell, "herion", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
+    [mari_sell, "Marijuana", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
+	[moonshine_sell, "Moonshine", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
+	[mushroom_sell, "Mushrooms", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
+	[herion_sell, "Herion", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
+	[cocaine_sell, "Cocaine", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
+	[lsd_sell, "LSD", "", [0,0], [] call RPP_fnc_generateID, 0, true, false],
 	
    /* Drug Equipment */
-	[cocaine_seeds, "cocaine_seed", "", [0,0], [] call RPP_fnc_generateID, 50, true, false],
-    [mari_seeds, "mari_seed", "", [0,0], [] call RPP_fnc_generateID, 50, true, false],
-	[herion_seeds, "herion_seed", "", [0,0], [] call RPP_fnc_generateID, 50, true, false]
+	[mari_seed, "mari_seed", "", [0,0], [] call RPP_fnc_generateID, 50, true, false],
+    [moon_seed, "moon_seed", "", [0,0], [] call RPP_fnc_generateID, 50, true, false],
+	[mush_seed, "mush_seed", "", [0,0], [] call RPP_fnc_generateID, 50, true, false],
+	[heri_seed, "heri_seed", "", [0,0], [] call RPP_fnc_generateID, 50, true, false],
+    [coca_seed, "coca_seed", "", [0,0], [] call RPP_fnc_generateID, 50, true, false],
+	[lsd_seed, "lsd_seed", "", [0,0], [] call RPP_fnc_generateID, 50, true, false]
 ];
 
 RPP_fnc_addStock = 

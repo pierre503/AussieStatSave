@@ -19,7 +19,7 @@ RPP_var_acc_password = "@NO@";
 RPP_var_deathTime = 900;
 RPP_var_serverRules = 
 [
-    "[1.0] Compliance Rules",
+    "[1.0] 	Compliance Rules",
     "[1.1]  Death-matching will not be tolerated",
 	"[1.2]	Do Not Hack Or Exploit Bugs",
 	"[1.3]  Common Decency and Respect",

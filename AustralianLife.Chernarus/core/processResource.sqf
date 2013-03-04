@@ -21,6 +21,12 @@ _MAD_var_processVinyl = [ ["Rubber", 4], ["Vinyl", 1], ["Rubber", 1] ];
 _MAD_var_processOil = [ ["Oil", 5], ["Petrol", 10], ["Petrol", 5] ];
 _MAD_var_processBottles = [ ["Bottle", 1], ["High_bottleWater", 1], ["Low_bottleWater", 1] ];
 _MAD_var_processSand2 = [ ["Sand", 10], ["Silicon", 1], ["Sand", 2] ];
+_SNB_var_processMari = [ ["unp_mari", 3], ["Marijuana", 2], ["Marijuana", 1] ];
+_SNB_var_processMoon = [ ["unp_moon", 3], ["Moonshine", 2], ["Moonshine", 1] ];				
+_SNB_var_processMush = [ ["unp_mush", 3], ["Mushrooms", 2], ["Mushrooms", 1] ];				
+_SNB_var_processHeri = [ ["unp_heri", 3], ["Herion", 2], ["Herion", 1] ];
+_SNB_var_processCoca = [ ["unp_coca", 3], ["Cocaine", 2], ["Cocaine", 1] ];
+_SNB_var_processLsd = [ ["unp_lsd", 3], ["LSD", 2], ["LSD", 1] ];
 
 /*Secondary to Tertiary*/
 _RPP_var_processIronBar1 = [ ["IronBar", 1], ["Nails", 10], ["Nails", 5] ];
@@ -69,6 +75,14 @@ RPP_var_processLocations =
 	[process_larix, "Saw Larix Log", "Process", _MAD_var_processLarix, ["manufacture", 30, 480, 330], 30],			
 	[process_maple, "Saw Maple Log", "Process", _MAD_var_processMaple, ["manufacture", 70, 800, 650], 33],
 
+	/* Drugs */
+	[unp_mari, "Process Marijuana", "Process", _SNB_var_processMari, ["manufacture", 1, 240, 110], 25],		
+	[unp_moon, "Process Moonshine", "Process", _SNB_var_processMoon, ["manufacture", 10, 380, 230], 25],			
+	[unp_mush, "Process Mushrooms", "Process", _SNB_var_processMush, ["manufacture", 20, 340, 280], 25],				
+	[unp_heri, "Process Herion", "Process", _SNB_var_processHeri, ["manufacture", 30, 480, 330], 30],			
+	[unp_coca, "Process Cocain", "Process", _SNB_var_processCoca, ["manufacture", 70, 800, 650], 33],
+	[unp_lsd, "Process LSD", "Process", _SNB_var_processLSD, ["manufacture", 70, 800, 650], 33],
+	
 	/* Process Oil */
 	[process_oil, "Process Oil", "Process", _MAD_var_processOil, ["manufacture", 30, 480, 280], 20],	
 

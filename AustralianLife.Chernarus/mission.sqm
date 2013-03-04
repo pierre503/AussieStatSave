@@ -112,7 +112,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=67;
+		items=70;
 		class Item0
 		{
 			side="LOGIC";
@@ -1478,10 +1478,70 @@ class Mission
 				};
 			};
 		};
+		class Item67
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6910.9912,6.0059524,2529.0112};
+					azimut=417.228;
+					id=520;
+					side="CIV";
+					vehicle="Doctor";
+					leader=1;
+					skill=0.60000002;
+					text="moonshine_sell";
+					init="doStop this;this allowdamage false;this setPos [ getPos this select 0, getPos this select 1, (getPos this select 2) +0.0];";
+				};
+			};
+		};
+		class Item68
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6491.502,6.2352295,2923.3901};
+					azimut=417.228;
+					id=521;
+					side="CIV";
+					vehicle="Doctor";
+					leader=1;
+					skill=0.60000002;
+					text="mushroom_sell";
+					init="doStop this;this allowdamage false;this setPos [ getPos this select 0, getPos this select 1, (getPos this select 2) +0.0];";
+				};
+			};
+		};
+		class Item69
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10057.242,6,1818.519};
+					azimut=417.228;
+					id=522;
+					side="CIV";
+					vehicle="Doctor";
+					leader=1;
+					skill=0.60000002;
+					text="lsd_sell";
+					init="doStop this;this allowdamage false;this setPos [ getPos this select 0, getPos this select 1, (getPos this select 2) +0.0];";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=430;
+		items=453;
 		class Item0
 		{
 			position[]={6703.5127,6,2551.6399};
@@ -3656,7 +3716,7 @@ class Mission
 			vehicle="Land_bags_stack_EP1";
 			lock="UNLOCKED";
 			skill=0.2;
-			text="cocaine_seeds";
+			text="moon_seed";
 			init="this allowdamage false";
 		};
 		class Item194
@@ -3669,7 +3729,7 @@ class Mission
 			vehicle="Land_bags_stack_EP1";
 			lock="UNLOCKED";
 			skill=0.2;
-			text="mari_seeds";
+			text="mari_seed";
 			init="this allowdamage false";
 		};
 		class Item195
@@ -5989,7 +6049,7 @@ class Mission
 			vehicle="Land_bags_stack_EP1";
 			lock="UNLOCKED";
 			skill=0.2;
-			text="herion_seeds";
+			text="mush_seed";
 			init="this allowdamage false";
 		};
 		class Item422
@@ -6096,10 +6156,244 @@ class Mission
 			text="Silver1";
 			init="this allowdamage false";
 		};
+		class Item430
+		{
+			position[]={10102.351,6.0127869,1632.1963};
+			id=497;
+			side="EMPTY";
+			vehicle="FlagCarrierNATO_EP1";
+			skill=0.60000002;
+			text="patrol_start";
+		};
+		class Item431
+		{
+			position[]={10166.696,5.9998579,1977.707};
+			id=498;
+			side="EMPTY";
+			vehicle="FlagCarrierNATO_EP1";
+			skill=0.60000002;
+			text="patrol_1";
+		};
+		class Item432
+		{
+			position[]={7007.7368,5.9998336,2822.6389};
+			id=499;
+			side="EMPTY";
+			vehicle="FlagCarrierNATO_EP1";
+			skill=0.60000002;
+			text="delivery_p2";
+		};
+		class Item433
+		{
+			position[]={6322.0908,6.000545,2620.8003};
+			id=500;
+			side="EMPTY";
+			vehicle="FlagCarrierNATO_EP1";
+			skill=0.60000002;
+			text="patrol_3";
+		};
+		class Item434
+		{
+			position[]={4464.6182,5.98,2475.8491};
+			id=501;
+			side="EMPTY";
+			vehicle="FlagCarrierNATO_EP1";
+			skill=0.60000002;
+			text="patrol_4";
+		};
+		class Item435
+		{
+			position[]={5441.3008,175.31773,3785.1797};
+			id=502;
+			side="EMPTY";
+			vehicle="FlagCarrierNATO_EP1";
+			skill=0.60000002;
+			text="patrol_6";
+		};
+		class Item436
+		{
+			position[]={10287.833,44.487312,3796.2932};
+			id=503;
+			side="EMPTY";
+			vehicle="FlagCarrierNATO_EP1";
+			skill=0.60000002;
+			text="patrol_2";
+		};
+		class Item437
+		{
+			position[]={3623.7402,6,2177.1658};
+			id=504;
+			side="EMPTY";
+			vehicle="FlagCarrierNATO_EP1";
+			skill=0.60000002;
+			text="patrol_5";
+		};
+		class Item438
+		{
+			position[]={4053.7107,78.974892,3329.9082};
+			azimut=-11.613222;
+			id=505;
+			side="EMPTY";
+			vehicle="Land_bags_stack_EP1";
+			skill=0.60000002;
+			text="shop_ironore_1";
+		};
+		class Item439
+		{
+			position[]={4051.0647,79.207924,3329.8989};
+			azimut=-12.5396;
+			id=506;
+			side="EMPTY";
+			vehicle="Land_Fire_burning";
+			skill=0.60000002;
+			text="unp_mari";
+		};
+		class Item440
+		{
+			position[]={4059.6292,78.665276,3331.4932};
+			azimut=418.603;
+			special="NONE";
+			id=507;
+			side="EMPTY";
+			vehicle="Land_Fire_burning";
+			lock="UNLOCKED";
+			skill=0.2;
+			text="unp_moon";
+		};
+		class Item441
+		{
+			position[]={4050.4199,79.469109,3318.8696};
+			azimut=-102.168;
+			special="NONE";
+			id=508;
+			side="EMPTY";
+			vehicle="Land_Fire_burning";
+			lock="UNLOCKED";
+			skill=0.2;
+			text="unp_heri";
+		};
+		class Item442
+		{
+			position[]={4060.0488,78.61425,3320.7766};
+			azimut=-102.168;
+			special="NONE";
+			id=509;
+			side="EMPTY";
+			vehicle="Land_Fire_burning";
+			lock="UNLOCKED";
+			skill=0.2;
+			text="unp_coca";
+		};
+		class Item443
+		{
+			position[]={4068.8665,78.074142,3322.1875};
+			azimut=-102.168;
+			special="NONE";
+			id=510;
+			side="EMPTY";
+			vehicle="Land_Fire_burning";
+			lock="UNLOCKED";
+			skill=0.2;
+			text="unp_lsd";
+		};
+		class Item444
+		{
+			position[]={4069.3784,77.924225,3333.0471};
+			azimut=-11.613222;
+			id=511;
+			side="EMPTY";
+			vehicle="Land_bags_stack_EP1";
+			skill=0.60000002;
+		};
+		class Item445
+		{
+			position[]={4066.7258,78.030441,3333.0381};
+			azimut=-12.5396;
+			id=512;
+			side="EMPTY";
+			vehicle="Land_Fire_burning";
+			skill=0.60000002;
+			text="unp_mush";
+		};
+		class Item446
+		{
+			position[]={4070.9658,77.971077,3322.5347};
+			azimut=-11.613222;
+			id=513;
+			side="EMPTY";
+			vehicle="Land_bags_stack_EP1";
+			skill=0.60000002;
+		};
+		class Item447
+		{
+			position[]={4052.7278,79.254372,3319};
+			azimut=-11.613222;
+			id=514;
+			side="EMPTY";
+			vehicle="Land_bags_stack_EP1";
+			skill=0.60000002;
+		};
+		class Item448
+		{
+			position[]={4062.0862,78.476845,3320.7051};
+			azimut=-11.613222;
+			id=515;
+			side="EMPTY";
+			vehicle="Land_bags_stack_EP1";
+			skill=0.60000002;
+		};
+		class Item449
+		{
+			position[]={4061.4639,78.564339,3331.6838};
+			azimut=-11.613222;
+			id=516;
+			side="EMPTY";
+			vehicle="Land_bags_stack_EP1";
+			skill=0.60000002;
+		};
+		class Item450
+		{
+			position[]={5419.5737,176.8772,3804.4436};
+			azimut=308.80301;
+			special="NONE";
+			id=517;
+			side="EMPTY";
+			vehicle="Land_bags_stack_EP1";
+			lock="UNLOCKED";
+			skill=0.2;
+			text="coca_seed";
+			init="this allowdamage false";
+		};
+		class Item451
+		{
+			position[]={5423.1699,176.50043,3805.3135};
+			azimut=308.80301;
+			special="NONE";
+			id=518;
+			side="EMPTY";
+			vehicle="Land_bags_stack_EP1";
+			lock="UNLOCKED";
+			skill=0.2;
+			text="lsd_seed";
+			init="this allowdamage false";
+		};
+		class Item452
+		{
+			position[]={5418.0991,177.28528,3798.6704};
+			azimut=308.80301;
+			special="NONE";
+			id=519;
+			side="EMPTY";
+			vehicle="Land_bags_stack_EP1";
+			lock="UNLOCKED";
+			skill=0.2;
+			text="heri_seed";
+			init="this allowdamage false";
+		};
 	};
 	class Markers
 	{
-		items=94;
+		items=98;
 		class Item0
 		{
 			position[]={6683.7944,6,2290.7031};
@@ -6243,7 +6537,7 @@ class Mission
 		};
 		class Item15
 		{
-			position[]={5417.521,176.79512,3809.991};
+			position[]={5418.5898,176.87112,3806.428};
 			name="illegal_goods";
 			text="Drug Seeds";
 			type="mil_flag";
@@ -6980,6 +7274,46 @@ class Mission
 			text="Silver Mine";
 			type="mil_flag";
 			colorName="ColorYellow";
+			a=0.64999998;
+			b=0.64999998;
+		};
+		class Item94
+		{
+			position[]={4060.8831,78.478401,3325.7207};
+			name="iron_smelter_3";
+			text="Process Drugs";
+			type="mil_flag";
+			colorName="ColorRed";
+			a=0.64999998;
+			b=0.64999998;
+		};
+		class Item95
+		{
+			position[]={6911.1924,6.0062957,2528.8452};
+			name="mari_sell_2_1";
+			text="Sell Moonshine";
+			type="mil_flag";
+			colorName="ColorRed";
+			a=0.64999998;
+			b=0.64999998;
+		};
+		class Item96
+		{
+			position[]={6491.7031,6.2318311,2923.2241};
+			name="mari_sell_2_2";
+			text="Sell Mushrooms";
+			type="mil_flag";
+			colorName="ColorRed";
+			a=0.64999998;
+			b=0.64999998;
+		};
+		class Item97
+		{
+			position[]={10057.443,6,1818.353};
+			name="mari_sell_2_3";
+			text="Sell LSD";
+			type="mil_flag";
+			colorName="ColorRed";
 			a=0.64999998;
 			b=0.64999998;
 		};

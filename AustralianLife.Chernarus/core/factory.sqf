@@ -90,12 +90,12 @@ _SNB_var_bikeFactory =
 
 _SNB_var_airFactory =
 [
-	["usec_bell206_2", ["manufacture", 70, 4250]],
-	["qantas_C130", ["manufacture", 60, 6500]],
-	["airnz_C130", ["manufacture", 55, 4200]],
-	["usec_bell206_1", ["manufacture", 70, 8000]],
-	["GNT_C185F", ["manufacture", 45, 2250]],
-	["FougaMagister4", ["manufacture", 45, 1250]]
+	["Su34", ["manufacture", 70, 4250]],
+	["C130J", ["manufacture", 60, 6500]],
+	["An2_2_TK_CIV_EP1", ["manufacture", 55, 4200]],
+	["Mi17_medevac_RU", ["manufacture", 70, 8000]],
+	["Mi17_Civilian", ["manufacture", 45, 2250]],
+	["Mi17_INS", ["manufacture", 45, 1250]]
 ];
 
 RPP_var_factoryDefine = 

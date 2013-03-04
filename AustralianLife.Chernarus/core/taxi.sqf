@@ -3,76 +3,76 @@ The Roleplay Project: Reloaded
 Copyright (C) 2011  Matthew Simms
 */
 
-RPP_var_deliveryLocations = 
+RPP_var_taxiLocations = 
 [
-    delivery, delivery_1, delivery_2, delivery_3, delivery_4, delivery_5,
-    delivery_6, delivery_7, delivery_8, delivery_9, delivery_10
+    taxi, taxi_1, taxi_2, taxi_3, taxi_4, taxi_5,
+    taxi_6, taxi_7, taxi_8, taxi_9, taxi_10
 ];
 
-RPP_var_deliveryStarts = 
+RPP_var_taxiStarts = 
 [
-    [delivery_start1, "Delivery Job"]
+    [taxi_start1, "Taxi Job"]
 ];
 
-RPP_var_hasDeliveryJob = false;
-RPP_var_deliveryBasePrice = 150;
-RPP_var_deliveringTo = empty;
-RPP_var_deliveryPenalty = 0.1;
-RPP_var_deliveryPay = 0;
+RPP_var_hasTaxiJob = false;
+RPP_var_taxiBasePrice = 170;
+RPP_var_taxiTo = empty;
+RPP_var_taxiPenalty = 0.1;
+RPP_var_taxiPay = 0;
 
-RPP_fnc_delivery_acceptJob = 
+RPP_fnc_taxi_acceptJob = 
 {
     private ["_randomLocation", "_locationObj", "_locationType", "_locationName", "_distanceTo", "_earning", "_marker"];
-    _randomLocation = RPP_var_deliveryLocations select (random ((count RPP_var_deliveryLocations)-1));
+    _randomLocation = RPP_var_taxiLocations select (random ((count RPP_var_taxiLocations)-1));
     _locationObj = _randomLocation;
     
     _distanceTo = player distance _locationObj;
-    _earning = ((RPP_var_deliveryBasePrice * _distanceTo) / (200 + random 100))*1.5;
+    _earning = ((RPP_var_taxiBasePrice * _distanceTo) / (200 + random 100))*1.5;
 
-    if (_locationObj == RPP_var_deliveringTo) exitWith
+    if (_locationObj == RPP_var_taxiTo) exitWith
     {
-        [] call RPP_fnc_delivery_acceptJob;
+        [] call RPP_fnc_taxi_acceptJob;
     };
 
-    RPP_var_deliveringTo = _locationObj;
-    RPP_var_deliveryPay = _earning;
+    RPP_var_taxiTo = _locationObj;
+    RPP_var_taxiPay = _earning;
 
-    (format[localize "STRS_delivery_start",_distanceTo, _earning]) call RPP_fnc_hint;
+    (format[localize "STRS_taxi_start",_distanceTo, _earning]) call RPP_fnc_hint;
 
-    RPP_var_hasDeliveryJob = true;
+    RPP_var_hasTaxiJob = true;
     
-    _marker = createMarkerLocal ["delivery_marker", _locationObj];
+    _marker = createMarkerLocal ["taxi_marker", _locationObj];
     _marker setMarkerPosLocal getPos _locationObj;
     _marker setMarkerShapeLocal "ICON";
     _marker setMarkerTypeLocal "DOT";
-    _marker setMarkerTextLocal "Delivery location";
+    _marker setMarkerTextLocal "Taxi Fare";
     _marker setMarkerSizeLocal [0.65,0.65];
     
     [_marker] spawn
     {
         _timeStart = time;
 
-        while {RPP_var_hasDeliveryJob} do
+        while {RPP_var_hasTaxiJob} do
         {
-            if (vehicle player distance RPP_var_deliveringTo <= 15) then
+            if (vehicle player distance RPP_var_taxiTo <= 15) then
             {
                 _timeEnd = time;
 
                 _totalTime = _timeEnd - _timeStart;
 
-                _loss = _totalTime * RPP_var_deliveryPenalty;
-                RPP_var_deliveryPay = RPP_var_deliveryPay - _loss;
-                RPP_var_deliveryPay = (ceil RPP_var_deliveryPay);
+                _loss = _totalTime * RPP_var_taxiPenalty;
+                RPP_var_taxiPay = RPP_var_taxiPay - _loss;
+                RPP_var_taxiPay = (ceil RPP_var_taxiPay);
                 
-                //["Money", RPP_var_deliveryPay] call RPP_fnc_addInventoryItem;
-                RPP_var_jobPaycheck = RPP_var_jobPaycheck + RPP_var_deliveryPay;
+                //["Money", RPP_var_taxiPay] call RPP_fnc_addInventoryItem;
+                RPP_var_jobPaycheck = RPP_var_jobPaycheck + RPP_var_taxiPay;
 
-                (format[localize "STRS_delivery_done", RPP_var_deliveryPay, _totalTime, _loss]) call RPP_fnc_hint;	
-                RPP_var_hasDeliveryJob = false;
+                (format[localize "STRS_taxi_done", RPP_var_taxiPay, _totalTime, _loss]) call RPP_fnc_hint;	
+                RPP_var_hasTaxiJob = false;
                 deleteMarkerLocal (_this select 0);
                 
                 sleep 10;
-                [] call RPP_fnc_delivery_acceptJob;
+                [] call RPP_fnc_taxi_acceptJob;
             };
 
             sleep 5;
@@ -83,23 +83,23 @@ RPP_fnc_delivery_acceptJob =
     
 };
 
-RPP_fnc_delivery_onAction =
+RPP_fnc_taxi_onAction =
 {
     private ["_playerHasJob"];
-    _playerHasJob = RPP_var_hasDeliveryJob;
+    _playerHasJob = RPP_var_hasTaxiJob;
 
     if (_playerHasJob) then
     {
-        localize "STRS_delivery_cancel" call RPP_fnc_hint;
-        RPP_var_hasDeliveryJob = false;
+        localize "STRS_taxi_cancel" call RPP_fnc_hint;
+        RPP_var_hasTaxiJob = false;
     }
     else
     {
-        [] call RPP_fnc_delivery_acceptJob;
+        [] call RPP_fnc_taxi_acceptJob;
     };
 };
 
-RPP_fnc_setupDelivery =
+RPP_fnc_setupTaxi =
 {
     {
         _name = _x select 1;
@@ -119,7 +119,7 @@ RPP_fnc_setupDelivery =
                 {
                     if (cursorTarget == (_this select 0)) then
                     {
-                        [33, "[] call RPP_fnc_delivery_onAction;", false, false, false] spawn RPP_fnc_addKeyAction;
+                        [33, "[] call RPP_fnc_taxi_onAction;", false, false, false] spawn RPP_fnc_addKeyAction;
                         _onTarget = true;
                     }
                     else
@@ -143,5 +143,5 @@ RPP_fnc_setupDelivery =
         ', _id];
 
         [player, vehicle player, compile format['(player distance %1 <= 20)', _obj], _onAdd, _id, _onRem] call RPP_fnc_addAction;
-    } forEach RPP_var_deliveryStarts
+    } forEach RPP_var_taxiStarts
 };

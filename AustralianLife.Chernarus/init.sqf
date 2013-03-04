@@ -126,6 +126,12 @@ waitUntil {scriptDone _script};
 _script = [] execVM "core\delivery.sqf";
 waitUntil {scriptDone _script};
 
+_script = [] execVM "core\patrol.sqf";
+waitUntil {scriptDone _script};
+
+_script = [] execVM "core\taxi.sqf";
+waitUntil {scriptDone _script};
+
 _script = [] execVM "core\paycheck.sqf";
 waitUntil {scriptDone _script};
 
@@ -203,6 +209,14 @@ if (isServer) then
     {
         (_x select 0) spawn RPP_fnc_freezeObject;
     } forEach RPP_var_deliveryStarts;
+	
+	{
+        (_x select 0) spawn RPP_fnc_freezeObject;
+    } forEach RPP_var_patrolStarts;
+	
+	{
+        (_x select 0) spawn RPP_fnc_freezeObject;
+    } forEach RPP_var_taxiStarts;
     
     {
         (_x select 0) spawn RPP_fnc_freezeObject;
@@ -275,6 +289,12 @@ if (!__isServer) then
 
     /* Setup delivery */
     [] spawn RPP_fnc_setupDelivery;
+	
+	/* Setup patrol */
+    [] spawn RPP_fnc_setupPatrol;
+	
+	/* Setup taxi */
+    [] spawn RPP_fnc_setupTaxi;
 
     /* Setup investing */
     [] spawn RPP_fnc_setupInvesting;
