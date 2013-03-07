@@ -2,7 +2,7 @@
 The Roleplay Project: Reloaded
 Copyright (C) 2011  Matthew Simms
 Copyright (C) 2012  MadOPS
-Copyright (C) 2012	Charles "Templar" McLellan (cpmjr1@gmail.com)
+Copyright (C) 2013	Steak n beer
 */
 
 
@@ -145,8 +145,8 @@ waitUntil {scriptDone _script};
 _script = [] execVM "core\trading.sqf";
 waitUntil {scriptDone _script};
 
-//_script = [] execVM "core\account.sqf";
-//waitUntil {scriptDone _script};
+_script = [] execVM "core\account.sqf";
+waitUntil {scriptDone _script};
 
 _script = [] execVM "core\restrain.sqf";
 waitUntil {scriptDone _script};

@@ -1,4 +1,5 @@
 onLoadMission = "Steak 'n Beer: The Australian Life";
+loadScreen = "loading.jpg";
 onLoadIntro = "BetaEVAL";
 
 class Header
