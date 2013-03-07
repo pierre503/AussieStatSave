@@ -1,0 +1,35 @@
+Can start fishing on water.
+Bait required for certain fish.
+Use fishing rod starts fishing.
+Catch depends on depth of sea.
+Pressing 'C' cancels fishing.
+Can start fishing on boats.
+
+-- Fishing table --
+
+- Baits -
+Worm
+Nightcrawler
+Minnow
+
+Fishing rod:
+Minnow - None - 1
+Bluegill - Worm -  10
+Catfish - Nightcrawler - 30
+Perch - Minnow - 15
+Trout - Nightcrawler - 20
+RockBass - Minnow - 40
+
+Fishing net:
+Shrimp - None -  1
+Sardine - None - 10
+Monkfish - None - 60
+Salmon - None - 30
+
+Harpoon:
+Shark - None - 65
+Tuna - None - 25
+Whale - None - 99
+Swordfish - None - 50
+
+

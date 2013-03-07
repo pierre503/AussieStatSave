@@ -1,0 +1,20 @@
+
+TODO:
+Arresting.
+
+- NOTES -
+Add copyright to top of files.
+Add sounds
+Using a shovel on grass = random items... artifacts in special locations, on sand = Sand.
+More Drugs - Cocaine, Add Drug shed.
+Backbacks should increase inventory size
+Able to assign animations to keys.
+Delivery - choose from a list of jobs that you can do, these are removed over time.
+UI Overhaul of everthing, find a better style.
+Carts - Cows
+Attempt server loader
+Salvaging
+Adding actions if player look at certain terrain types such as fishing and display text.
+Adding a text to be display in the center of the screen showing actions.
+Add a new chat system.
+

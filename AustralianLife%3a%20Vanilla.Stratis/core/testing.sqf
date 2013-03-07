@@ -1,0 +1,1 @@
+_this setObjectTexture [0, "texture\patrol.paa"]
